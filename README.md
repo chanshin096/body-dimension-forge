@@ -22,8 +22,10 @@
 
 ## ドキュメント
 
+- `docs/INDEX.md`: 文書の場所、役割、正本を示す索引
 - `docs/SPEC.md`: 第1版仕様
 - `docs/DECISIONS.md`: 判断記録
 - `docs/DATA_SOURCES.md`: データ出典候補と採否記録
+- `docs/DATA_ACCEPTANCE_CRITERIA.md`: データの必須条件と項目別採用判定ゲート
 - `docs/MODEL_REPORT.md`: モデル検討・評価記録
 - `docs/TEST_PLAN.md`: テスト計画
