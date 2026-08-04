@@ -1,0 +1,5 @@
+# CDC/NCHS から取得する生データはローカル検査専用とし、Git へ追加しない。
+/data/raw/
+
+__pycache__/
+*.py[cod]
