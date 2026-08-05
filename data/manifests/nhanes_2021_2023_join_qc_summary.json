@@ -1,0 +1,1130 @@
+{
+  "schema_version": 1,
+  "scope": "aggregate join-safety, adult-candidate, missingness, and QC counts only",
+  "source_files": [
+    "BMX_L.xpt",
+    "DEMO_L.xpt"
+  ],
+  "pre_join_checks": {
+    "BMX_L.xpt": {
+      "row_count": 8860,
+      "present": true,
+      "missing_count": 0,
+      "duplicate_row_count": 0,
+      "unique_count": 8860
+    },
+    "DEMO_L.xpt": {
+      "row_count": 11933,
+      "present": true,
+      "missing_count": 0,
+      "duplicate_row_count": 0,
+      "unique_count": 11933
+    },
+    "common_key_count": 8860,
+    "bmx_only_key_count": 0,
+    "demo_only_key_count": 3073,
+    "safe_to_join": true
+  },
+  "join": {
+    "performed": true,
+    "type": "inner",
+    "validation": "one_to_one",
+    "row_count": 8860
+  },
+  "age_candidates": {
+    "all_ages": {
+      "filter": "none",
+      "groups": {
+        "overall": {
+          "target_count": 8860,
+          "items": {
+            "BMXHT": {
+              "target_count": 8860,
+              "non_missing_count": 8499,
+              "missing_count": 361,
+              "availability_rate": 0.959255079006772,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 46,
+                  "3": 88,
+                  "missing": 8726
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 8235,
+                "2": 147,
+                "3": 409,
+                "4": 69
+              }
+            },
+            "BMXWT": {
+              "target_count": 8860,
+              "non_missing_count": 8754,
+              "missing_count": 106,
+              "availability_rate": 0.9880361173814899,
+              "comment_code_counts": {
+                "BMIWT": {
+                  "1": 30,
+                  "3": 296,
+                  "4": 19,
+                  "missing": 8515
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 8235,
+                "2": 147,
+                "3": 409,
+                "4": 69
+              }
+            },
+            "BMXBMI": {
+              "target_count": 8860,
+              "non_missing_count": 8471,
+              "missing_count": 389,
+              "availability_rate": 0.9560948081264108,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 46,
+                  "3": 88,
+                  "missing": 8726
+                },
+                "BMIWT": {
+                  "1": 30,
+                  "3": 296,
+                  "4": 19,
+                  "missing": 8515
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 8235,
+                "2": 147,
+                "3": 409,
+                "4": 69
+              }
+            },
+            "BMXWAIST": {
+              "target_count": 8860,
+              "non_missing_count": 8190,
+              "missing_count": 670,
+              "availability_rate": 0.9243792325056434,
+              "comment_code_counts": {
+                "BMIWAIST": {
+                  "1": 347,
+                  "missing": 8513
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 8235,
+                "2": 147,
+                "3": 409,
+                "4": 69
+              }
+            },
+            "BMXHIP": {
+              "target_count": 8860,
+              "non_missing_count": 6776,
+              "missing_count": 2084,
+              "availability_rate": 0.764785553047404,
+              "comment_code_counts": {
+                "BMIHIP": {
+                  "1": 361,
+                  "missing": 8499
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 8235,
+                "2": 147,
+                "3": 409,
+                "4": 69
+              }
+            }
+          }
+        },
+        "RIAGENDR=1": {
+          "target_count": 4125,
+          "items": {
+            "BMXHT": {
+              "target_count": 4125,
+              "non_missing_count": 3947,
+              "missing_count": 178,
+              "availability_rate": 0.9568484848484848,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 34,
+                  "3": 38,
+                  "missing": 4053
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3861,
+                "2": 64,
+                "3": 179,
+                "4": 21
+              }
+            },
+            "BMXWT": {
+              "target_count": 4125,
+              "non_missing_count": 4086,
+              "missing_count": 39,
+              "availability_rate": 0.9905454545454545,
+              "comment_code_counts": {
+                "BMIWT": {
+                  "1": 13,
+                  "3": 135,
+                  "4": 14,
+                  "missing": 3963
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3861,
+                "2": 64,
+                "3": 179,
+                "4": 21
+              }
+            },
+            "BMXBMI": {
+              "target_count": 4125,
+              "non_missing_count": 3937,
+              "missing_count": 188,
+              "availability_rate": 0.9544242424242424,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 34,
+                  "3": 38,
+                  "missing": 4053
+                },
+                "BMIWT": {
+                  "1": 13,
+                  "3": 135,
+                  "4": 14,
+                  "missing": 3963
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3861,
+                "2": 64,
+                "3": 179,
+                "4": 21
+              }
+            },
+            "BMXWAIST": {
+              "target_count": 4125,
+              "non_missing_count": 3832,
+              "missing_count": 293,
+              "availability_rate": 0.928969696969697,
+              "comment_code_counts": {
+                "BMIWAIST": {
+                  "1": 147,
+                  "missing": 3978
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3861,
+                "2": 64,
+                "3": 179,
+                "4": 21
+              }
+            },
+            "BMXHIP": {
+              "target_count": 4125,
+              "non_missing_count": 3106,
+              "missing_count": 1019,
+              "availability_rate": 0.752969696969697,
+              "comment_code_counts": {
+                "BMIHIP": {
+                  "1": 158,
+                  "missing": 3967
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3861,
+                "2": 64,
+                "3": 179,
+                "4": 21
+              }
+            }
+          }
+        },
+        "RIAGENDR=2": {
+          "target_count": 4735,
+          "items": {
+            "BMXHT": {
+              "target_count": 4735,
+              "non_missing_count": 4552,
+              "missing_count": 183,
+              "availability_rate": 0.961351636747624,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 12,
+                  "3": 50,
+                  "missing": 4673
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 4374,
+                "2": 83,
+                "3": 230,
+                "4": 48
+              }
+            },
+            "BMXWT": {
+              "target_count": 4735,
+              "non_missing_count": 4668,
+              "missing_count": 67,
+              "availability_rate": 0.9858500527983105,
+              "comment_code_counts": {
+                "BMIWT": {
+                  "1": 17,
+                  "3": 161,
+                  "4": 5,
+                  "missing": 4552
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 4374,
+                "2": 83,
+                "3": 230,
+                "4": 48
+              }
+            },
+            "BMXBMI": {
+              "target_count": 4735,
+              "non_missing_count": 4534,
+              "missing_count": 201,
+              "availability_rate": 0.9575501583949314,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 12,
+                  "3": 50,
+                  "missing": 4673
+                },
+                "BMIWT": {
+                  "1": 17,
+                  "3": 161,
+                  "4": 5,
+                  "missing": 4552
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 4374,
+                "2": 83,
+                "3": 230,
+                "4": 48
+              }
+            },
+            "BMXWAIST": {
+              "target_count": 4735,
+              "non_missing_count": 4358,
+              "missing_count": 377,
+              "availability_rate": 0.9203801478352692,
+              "comment_code_counts": {
+                "BMIWAIST": {
+                  "1": 200,
+                  "missing": 4535
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 4374,
+                "2": 83,
+                "3": 230,
+                "4": 48
+              }
+            },
+            "BMXHIP": {
+              "target_count": 4735,
+              "non_missing_count": 3670,
+              "missing_count": 1065,
+              "availability_rate": 0.7750791974656811,
+              "comment_code_counts": {
+                "BMIHIP": {
+                  "1": 203,
+                  "missing": 4532
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 4374,
+                "2": 83,
+                "3": 230,
+                "4": 48
+              }
+            }
+          }
+        }
+      },
+      "sample_design_variables": {
+        "SDMVSTRA": {
+          "present": true,
+          "missing_count": 0,
+          "code_counts": {
+            "173": 639,
+            "174": 592,
+            "175": 638,
+            "176": 539,
+            "177": 646,
+            "178": 613,
+            "179": 642,
+            "180": 617,
+            "181": 576,
+            "182": 579,
+            "183": 505,
+            "184": 682,
+            "185": 562,
+            "186": 498,
+            "187": 532
+          }
+        },
+        "SDMVPSU": {
+          "present": true,
+          "missing_count": 0,
+          "code_counts": {
+            "1": 4540,
+            "2": 4320
+          }
+        },
+        "WTMEC2YR": {
+          "present": true,
+          "missing_count": 0,
+          "value_class_counts": {
+            "positive": 8860,
+            "zero": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    "age_18_or_older": {
+      "filter": "RIDAGEYR >= 18",
+      "groups": {
+        "overall": {
+          "target_count": 6337,
+          "items": {
+            "BMXHT": {
+              "target_count": 6337,
+              "non_missing_count": 6262,
+              "missing_count": 75,
+              "availability_rate": 0.98816474672558,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 22,
+                  "3": 86,
+                  "missing": 6229
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5879,
+                "2": 98,
+                "3": 307,
+                "4": 53
+              }
+            },
+            "BMXWT": {
+              "target_count": 6337,
+              "non_missing_count": 6248,
+              "missing_count": 89,
+              "availability_rate": 0.9859554994476882,
+              "comment_code_counts": {
+                "BMIWT": {
+                  "1": 29,
+                  "3": 222,
+                  "4": 14,
+                  "missing": 6072
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5879,
+                "2": 98,
+                "3": 307,
+                "4": 53
+              }
+            },
+            "BMXBMI": {
+              "target_count": 6337,
+              "non_missing_count": 6235,
+              "missing_count": 102,
+              "availability_rate": 0.9839040555467887,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 22,
+                  "3": 86,
+                  "missing": 6229
+                },
+                "BMIWT": {
+                  "1": 29,
+                  "3": 222,
+                  "4": 14,
+                  "missing": 6072
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5879,
+                "2": 98,
+                "3": 307,
+                "4": 53
+              }
+            },
+            "BMXWAIST": {
+              "target_count": 6337,
+              "non_missing_count": 6019,
+              "missing_count": 318,
+              "availability_rate": 0.9498185261164589,
+              "comment_code_counts": {
+                "BMIWAIST": {
+                  "1": 259,
+                  "missing": 6078
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5879,
+                "2": 98,
+                "3": 307,
+                "4": 53
+              }
+            },
+            "BMXHIP": {
+              "target_count": 6337,
+              "non_missing_count": 5957,
+              "missing_count": 380,
+              "availability_rate": 0.9400347167429383,
+              "comment_code_counts": {
+                "BMIHIP": {
+                  "1": 321,
+                  "missing": 6016
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5879,
+                "2": 98,
+                "3": 307,
+                "4": 53
+              }
+            }
+          }
+        },
+        "RIAGENDR=1": {
+          "target_count": 2858,
+          "items": {
+            "BMXHT": {
+              "target_count": 2858,
+              "non_missing_count": 2827,
+              "missing_count": 31,
+              "availability_rate": 0.9891532540237928,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 16,
+                  "3": 36,
+                  "missing": 2806
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2674,
+                "2": 37,
+                "3": 132,
+                "4": 15
+              }
+            },
+            "BMXWT": {
+              "target_count": 2858,
+              "non_missing_count": 2825,
+              "missing_count": 33,
+              "availability_rate": 0.9884534639608118,
+              "comment_code_counts": {
+                "BMIWT": {
+                  "1": 13,
+                  "3": 95,
+                  "4": 12,
+                  "missing": 2738
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2674,
+                "2": 37,
+                "3": 132,
+                "4": 15
+              }
+            },
+            "BMXBMI": {
+              "target_count": 2858,
+              "non_missing_count": 2817,
+              "missing_count": 41,
+              "availability_rate": 0.9856543037088873,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 16,
+                  "3": 36,
+                  "missing": 2806
+                },
+                "BMIWT": {
+                  "1": 13,
+                  "3": 95,
+                  "4": 12,
+                  "missing": 2738
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2674,
+                "2": 37,
+                "3": 132,
+                "4": 15
+              }
+            },
+            "BMXWAIST": {
+              "target_count": 2858,
+              "non_missing_count": 2738,
+              "missing_count": 120,
+              "availability_rate": 0.9580125962211337,
+              "comment_code_counts": {
+                "BMIWAIST": {
+                  "1": 104,
+                  "missing": 2754
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2674,
+                "2": 37,
+                "3": 132,
+                "4": 15
+              }
+            },
+            "BMXHIP": {
+              "target_count": 2858,
+              "non_missing_count": 2702,
+              "missing_count": 156,
+              "availability_rate": 0.9454163750874738,
+              "comment_code_counts": {
+                "BMIHIP": {
+                  "1": 139,
+                  "missing": 2719
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2674,
+                "2": 37,
+                "3": 132,
+                "4": 15
+              }
+            }
+          }
+        },
+        "RIAGENDR=2": {
+          "target_count": 3479,
+          "items": {
+            "BMXHT": {
+              "target_count": 3479,
+              "non_missing_count": 3435,
+              "missing_count": 44,
+              "availability_rate": 0.9873526875538948,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 6,
+                  "3": 50,
+                  "missing": 3423
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3205,
+                "2": 61,
+                "3": 175,
+                "4": 38
+              }
+            },
+            "BMXWT": {
+              "target_count": 3479,
+              "non_missing_count": 3423,
+              "missing_count": 56,
+              "availability_rate": 0.9839034205231388,
+              "comment_code_counts": {
+                "BMIWT": {
+                  "1": 16,
+                  "3": 127,
+                  "4": 2,
+                  "missing": 3334
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3205,
+                "2": 61,
+                "3": 175,
+                "4": 38
+              }
+            },
+            "BMXBMI": {
+              "target_count": 3479,
+              "non_missing_count": 3418,
+              "missing_count": 61,
+              "availability_rate": 0.9824662259269905,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 6,
+                  "3": 50,
+                  "missing": 3423
+                },
+                "BMIWT": {
+                  "1": 16,
+                  "3": 127,
+                  "4": 2,
+                  "missing": 3334
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3205,
+                "2": 61,
+                "3": 175,
+                "4": 38
+              }
+            },
+            "BMXWAIST": {
+              "target_count": 3479,
+              "non_missing_count": 3281,
+              "missing_count": 198,
+              "availability_rate": 0.9430870939925265,
+              "comment_code_counts": {
+                "BMIWAIST": {
+                  "1": 155,
+                  "missing": 3324
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3205,
+                "2": 61,
+                "3": 175,
+                "4": 38
+              }
+            },
+            "BMXHIP": {
+              "target_count": 3479,
+              "non_missing_count": 3255,
+              "missing_count": 224,
+              "availability_rate": 0.9356136820925554,
+              "comment_code_counts": {
+                "BMIHIP": {
+                  "1": 182,
+                  "missing": 3297
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3205,
+                "2": 61,
+                "3": 175,
+                "4": 38
+              }
+            }
+          }
+        }
+      },
+      "sample_design_variables": {
+        "SDMVSTRA": {
+          "present": true,
+          "missing_count": 0,
+          "code_counts": {
+            "173": 481,
+            "174": 409,
+            "175": 485,
+            "176": 369,
+            "177": 486,
+            "178": 434,
+            "179": 442,
+            "180": 463,
+            "181": 438,
+            "182": 392,
+            "183": 358,
+            "184": 476,
+            "185": 398,
+            "186": 361,
+            "187": 345
+          }
+        },
+        "SDMVPSU": {
+          "present": true,
+          "missing_count": 0,
+          "code_counts": {
+            "1": 3223,
+            "2": 3114
+          }
+        },
+        "WTMEC2YR": {
+          "present": true,
+          "missing_count": 0,
+          "value_class_counts": {
+            "positive": 6337,
+            "zero": 0,
+            "negative": 0
+          }
+        }
+      }
+    },
+    "age_20_or_older": {
+      "filter": "RIDAGEYR >= 20",
+      "groups": {
+        "overall": {
+          "target_count": 6064,
+          "items": {
+            "BMXHT": {
+              "target_count": 6064,
+              "non_missing_count": 5997,
+              "missing_count": 67,
+              "availability_rate": 0.9889511873350924,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 22,
+                  "3": 86,
+                  "missing": 5956
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5623,
+                "2": 97,
+                "3": 299,
+                "4": 45
+              }
+            },
+            "BMXWT": {
+              "target_count": 6064,
+              "non_missing_count": 5983,
+              "missing_count": 81,
+              "availability_rate": 0.9866424802110818,
+              "comment_code_counts": {
+                "BMIWT": {
+                  "1": 29,
+                  "3": 213,
+                  "4": 13,
+                  "missing": 5809
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5623,
+                "2": 97,
+                "3": 299,
+                "4": 45
+              }
+            },
+            "BMXBMI": {
+              "target_count": 6064,
+              "non_missing_count": 5970,
+              "missing_count": 94,
+              "availability_rate": 0.9844986807387863,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 22,
+                  "3": 86,
+                  "missing": 5956
+                },
+                "BMIWT": {
+                  "1": 29,
+                  "3": 213,
+                  "4": 13,
+                  "missing": 5809
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5623,
+                "2": 97,
+                "3": 299,
+                "4": 45
+              }
+            },
+            "BMXWAIST": {
+              "target_count": 6064,
+              "non_missing_count": 5762,
+              "missing_count": 302,
+              "availability_rate": 0.950197889182058,
+              "comment_code_counts": {
+                "BMIWAIST": {
+                  "1": 251,
+                  "missing": 5813
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5623,
+                "2": 97,
+                "3": 299,
+                "4": 45
+              }
+            },
+            "BMXHIP": {
+              "target_count": 6064,
+              "non_missing_count": 5701,
+              "missing_count": 363,
+              "availability_rate": 0.9401385224274407,
+              "comment_code_counts": {
+                "BMIHIP": {
+                  "1": 312,
+                  "missing": 5752
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 5623,
+                "2": 97,
+                "3": 299,
+                "4": 45
+              }
+            }
+          }
+        },
+        "RIAGENDR=1": {
+          "target_count": 2720,
+          "items": {
+            "BMXHT": {
+              "target_count": 2720,
+              "non_missing_count": 2690,
+              "missing_count": 30,
+              "availability_rate": 0.9889705882352942,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 16,
+                  "3": 36,
+                  "missing": 2668
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2541,
+                "2": 36,
+                "3": 129,
+                "4": 14
+              }
+            },
+            "BMXWT": {
+              "target_count": 2720,
+              "non_missing_count": 2688,
+              "missing_count": 32,
+              "availability_rate": 0.9882352941176471,
+              "comment_code_counts": {
+                "BMIWT": {
+                  "1": 13,
+                  "3": 91,
+                  "4": 11,
+                  "missing": 2605
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2541,
+                "2": 36,
+                "3": 129,
+                "4": 14
+              }
+            },
+            "BMXBMI": {
+              "target_count": 2720,
+              "non_missing_count": 2680,
+              "missing_count": 40,
+              "availability_rate": 0.9852941176470589,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 16,
+                  "3": 36,
+                  "missing": 2668
+                },
+                "BMIWT": {
+                  "1": 13,
+                  "3": 91,
+                  "4": 11,
+                  "missing": 2605
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2541,
+                "2": 36,
+                "3": 129,
+                "4": 14
+              }
+            },
+            "BMXWAIST": {
+              "target_count": 2720,
+              "non_missing_count": 2605,
+              "missing_count": 115,
+              "availability_rate": 0.9577205882352942,
+              "comment_code_counts": {
+                "BMIWAIST": {
+                  "1": 100,
+                  "missing": 2620
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2541,
+                "2": 36,
+                "3": 129,
+                "4": 14
+              }
+            },
+            "BMXHIP": {
+              "target_count": 2720,
+              "non_missing_count": 2569,
+              "missing_count": 151,
+              "availability_rate": 0.944485294117647,
+              "comment_code_counts": {
+                "BMIHIP": {
+                  "1": 135,
+                  "missing": 2585
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 2541,
+                "2": 36,
+                "3": 129,
+                "4": 14
+              }
+            }
+          }
+        },
+        "RIAGENDR=2": {
+          "target_count": 3344,
+          "items": {
+            "BMXHT": {
+              "target_count": 3344,
+              "non_missing_count": 3307,
+              "missing_count": 37,
+              "availability_rate": 0.9889354066985646,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 6,
+                  "3": 50,
+                  "missing": 3288
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3082,
+                "2": 61,
+                "3": 170,
+                "4": 31
+              }
+            },
+            "BMXWT": {
+              "target_count": 3344,
+              "non_missing_count": 3295,
+              "missing_count": 49,
+              "availability_rate": 0.9853468899521531,
+              "comment_code_counts": {
+                "BMIWT": {
+                  "1": 16,
+                  "3": 122,
+                  "4": 2,
+                  "missing": 3204
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3082,
+                "2": 61,
+                "3": 170,
+                "4": 31
+              }
+            },
+            "BMXBMI": {
+              "target_count": 3344,
+              "non_missing_count": 3290,
+              "missing_count": 54,
+              "availability_rate": 0.9838516746411483,
+              "comment_code_counts": {
+                "BMIHT": {
+                  "1": 6,
+                  "3": 50,
+                  "missing": 3288
+                },
+                "BMIWT": {
+                  "1": 16,
+                  "3": 122,
+                  "4": 2,
+                  "missing": 3204
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3082,
+                "2": 61,
+                "3": 170,
+                "4": 31
+              }
+            },
+            "BMXWAIST": {
+              "target_count": 3344,
+              "non_missing_count": 3157,
+              "missing_count": 187,
+              "availability_rate": 0.944078947368421,
+              "comment_code_counts": {
+                "BMIWAIST": {
+                  "1": 151,
+                  "missing": 3193
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3082,
+                "2": 61,
+                "3": 170,
+                "4": 31
+              }
+            },
+            "BMXHIP": {
+              "target_count": 3344,
+              "non_missing_count": 3132,
+              "missing_count": 212,
+              "availability_rate": 0.9366028708133971,
+              "comment_code_counts": {
+                "BMIHIP": {
+                  "1": 177,
+                  "missing": 3167
+                }
+              },
+              "bmdstats_code_counts": {
+                "1": 3082,
+                "2": 61,
+                "3": 170,
+                "4": 31
+              }
+            }
+          }
+        }
+      },
+      "sample_design_variables": {
+        "SDMVSTRA": {
+          "present": true,
+          "missing_count": 0,
+          "code_counts": {
+            "173": 463,
+            "174": 395,
+            "175": 468,
+            "176": 357,
+            "177": 469,
+            "178": 422,
+            "179": 420,
+            "180": 430,
+            "181": 421,
+            "182": 373,
+            "183": 341,
+            "184": 460,
+            "185": 387,
+            "186": 334,
+            "187": 324
+          }
+        },
+        "SDMVPSU": {
+          "present": true,
+          "missing_count": 0,
+          "code_counts": {
+            "1": 3088,
+            "2": 2976
+          }
+        },
+        "WTMEC2YR": {
+          "present": true,
+          "missing_count": 0,
+          "value_class_counts": {
+            "positive": 6064,
+            "zero": 0,
+            "negative": 0
+          }
+        }
+      }
+    }
+  },
+  "decisions": {
+    "adult_age_threshold": "undecided",
+    "RIAGENDR_combination": "undecided",
+    "missing_and_qc_handling": "undecided",
+    "gate_B": "pending",
+    "gate_C": "pending"
+  },
+  "prohibited_processing": {
+    "imputation": false,
+    "row_or_outlier_removal": false,
+    "weighting_or_population_estimation": false,
+    "correlation_regression_model_or_coefficients": false,
+    "individual_rows_or_key_values_saved": false
+  }
+}
