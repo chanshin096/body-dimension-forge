@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "scope": "aggregate missingness, measurement-status, comment, and provisional QC policy counts only",
+  "source_files": [
+    "BMX_L.xpt",
+    "DEMO_L.xpt"
+  ],
+  "population_filter": "RIDAGEYR >= 20",
+  "grouping": "RIAGENDR raw codes kept separately; no labels inferred and no unconditional combination",
+  "category_precedence": [
+    "exclude_could_not_obtain",
+    "exclude_no_body_measures",
+    "hold_other_missing",
+    "hold_comment_on_value",
+    "usable"
+  ],
+  "groups": {
+    "overall": {
+      "target_count": 6064,
+      "items": {
+        "BMXHT": {
+          "target_count": 6064,
+          "value_state_counts": {
+            "non_missing": 5997,
+            "missing": 67
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 22,
+            "exclude_no_body_measures": 45,
+            "hold_comment_on_value": 86,
+            "usable": 5911
+          },
+          "comment_code_counts": {
+            "BMIHT": {
+              "1": 22,
+              "3": 86,
+              "missing": 5956
+            }
+          },
+          "component_status_code_counts": {
+            "1": 5623,
+            "2": 97,
+            "3": 299,
+            "4": 45
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXWT": {
+          "target_count": 6064,
+          "value_state_counts": {
+            "non_missing": 5983,
+            "missing": 81
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 29,
+            "exclude_no_body_measures": 45,
+            "hold_comment_on_value": 226,
+            "hold_other_missing": 7,
+            "usable": 5757
+          },
+          "comment_code_counts": {
+            "BMIWT": {
+              "1": 29,
+              "3": 213,
+              "4": 13,
+              "missing": 5809
+            }
+          },
+          "component_status_code_counts": {
+            "1": 5623,
+            "2": 97,
+            "3": 299,
+            "4": 45
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXBMI": {
+          "target_count": 6064,
+          "value_state_counts": {
+            "non_missing": 5970,
+            "missing": 94
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 44,
+            "exclude_no_body_measures": 45,
+            "hold_comment_on_value": 295,
+            "hold_other_missing": 5,
+            "usable": 5675
+          },
+          "comment_code_counts": {
+            "BMIHT": {
+              "1": 22,
+              "3": 86,
+              "missing": 5956
+            },
+            "BMIWT": {
+              "1": 29,
+              "3": 213,
+              "4": 13,
+              "missing": 5809
+            }
+          },
+          "component_status_code_counts": {
+            "1": 5623,
+            "2": 97,
+            "3": 299,
+            "4": 45
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXWAIST": {
+          "target_count": 6064,
+          "value_state_counts": {
+            "non_missing": 5762,
+            "missing": 302
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 251,
+            "exclude_no_body_measures": 45,
+            "hold_other_missing": 6,
+            "usable": 5762
+          },
+          "comment_code_counts": {
+            "BMIWAIST": {
+              "1": 251,
+              "missing": 5813
+            }
+          },
+          "component_status_code_counts": {
+            "1": 5623,
+            "2": 97,
+            "3": 299,
+            "4": 45
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXHIP": {
+          "target_count": 6064,
+          "value_state_counts": {
+            "non_missing": 5701,
+            "missing": 363
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 312,
+            "exclude_no_body_measures": 45,
+            "hold_other_missing": 6,
+            "usable": 5701
+          },
+          "comment_code_counts": {
+            "BMIHIP": {
+              "1": 312,
+              "missing": 5752
+            }
+          },
+          "component_status_code_counts": {
+            "1": 5623,
+            "2": 97,
+            "3": 299,
+            "4": 45
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        }
+      }
+    },
+    "RIAGENDR=1": {
+      "target_count": 2720,
+      "items": {
+        "BMXHT": {
+          "target_count": 2720,
+          "value_state_counts": {
+            "non_missing": 2690,
+            "missing": 30
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 16,
+            "exclude_no_body_measures": 14,
+            "hold_comment_on_value": 36,
+            "usable": 2654
+          },
+          "comment_code_counts": {
+            "BMIHT": {
+              "1": 16,
+              "3": 36,
+              "missing": 2668
+            }
+          },
+          "component_status_code_counts": {
+            "1": 2541,
+            "2": 36,
+            "3": 129,
+            "4": 14
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXWT": {
+          "target_count": 2720,
+          "value_state_counts": {
+            "non_missing": 2688,
+            "missing": 32
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 13,
+            "exclude_no_body_measures": 14,
+            "hold_comment_on_value": 102,
+            "hold_other_missing": 5,
+            "usable": 2586
+          },
+          "comment_code_counts": {
+            "BMIWT": {
+              "1": 13,
+              "3": 91,
+              "4": 11,
+              "missing": 2605
+            }
+          },
+          "component_status_code_counts": {
+            "1": 2541,
+            "2": 36,
+            "3": 129,
+            "4": 14
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXBMI": {
+          "target_count": 2720,
+          "value_state_counts": {
+            "non_missing": 2680,
+            "missing": 40
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 22,
+            "exclude_no_body_measures": 14,
+            "hold_comment_on_value": 129,
+            "hold_other_missing": 4,
+            "usable": 2551
+          },
+          "comment_code_counts": {
+            "BMIHT": {
+              "1": 16,
+              "3": 36,
+              "missing": 2668
+            },
+            "BMIWT": {
+              "1": 13,
+              "3": 91,
+              "4": 11,
+              "missing": 2605
+            }
+          },
+          "component_status_code_counts": {
+            "1": 2541,
+            "2": 36,
+            "3": 129,
+            "4": 14
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXWAIST": {
+          "target_count": 2720,
+          "value_state_counts": {
+            "non_missing": 2605,
+            "missing": 115
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 100,
+            "exclude_no_body_measures": 14,
+            "hold_other_missing": 1,
+            "usable": 2605
+          },
+          "comment_code_counts": {
+            "BMIWAIST": {
+              "1": 100,
+              "missing": 2620
+            }
+          },
+          "component_status_code_counts": {
+            "1": 2541,
+            "2": 36,
+            "3": 129,
+            "4": 14
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXHIP": {
+          "target_count": 2720,
+          "value_state_counts": {
+            "non_missing": 2569,
+            "missing": 151
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 135,
+            "exclude_no_body_measures": 14,
+            "hold_other_missing": 2,
+            "usable": 2569
+          },
+          "comment_code_counts": {
+            "BMIHIP": {
+              "1": 135,
+              "missing": 2585
+            }
+          },
+          "component_status_code_counts": {
+            "1": 2541,
+            "2": 36,
+            "3": 129,
+            "4": 14
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        }
+      }
+    },
+    "RIAGENDR=2": {
+      "target_count": 3344,
+      "items": {
+        "BMXHT": {
+          "target_count": 3344,
+          "value_state_counts": {
+            "non_missing": 3307,
+            "missing": 37
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 6,
+            "exclude_no_body_measures": 31,
+            "hold_comment_on_value": 50,
+            "usable": 3257
+          },
+          "comment_code_counts": {
+            "BMIHT": {
+              "1": 6,
+              "3": 50,
+              "missing": 3288
+            }
+          },
+          "component_status_code_counts": {
+            "1": 3082,
+            "2": 61,
+            "3": 170,
+            "4": 31
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXWT": {
+          "target_count": 3344,
+          "value_state_counts": {
+            "non_missing": 3295,
+            "missing": 49
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 16,
+            "exclude_no_body_measures": 31,
+            "hold_comment_on_value": 124,
+            "hold_other_missing": 2,
+            "usable": 3171
+          },
+          "comment_code_counts": {
+            "BMIWT": {
+              "1": 16,
+              "3": 122,
+              "4": 2,
+              "missing": 3204
+            }
+          },
+          "component_status_code_counts": {
+            "1": 3082,
+            "2": 61,
+            "3": 170,
+            "4": 31
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXBMI": {
+          "target_count": 3344,
+          "value_state_counts": {
+            "non_missing": 3290,
+            "missing": 54
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 22,
+            "exclude_no_body_measures": 31,
+            "hold_comment_on_value": 166,
+            "hold_other_missing": 1,
+            "usable": 3124
+          },
+          "comment_code_counts": {
+            "BMIHT": {
+              "1": 6,
+              "3": 50,
+              "missing": 3288
+            },
+            "BMIWT": {
+              "1": 16,
+              "3": 122,
+              "4": 2,
+              "missing": 3204
+            }
+          },
+          "component_status_code_counts": {
+            "1": 3082,
+            "2": 61,
+            "3": 170,
+            "4": 31
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXWAIST": {
+          "target_count": 3344,
+          "value_state_counts": {
+            "non_missing": 3157,
+            "missing": 187
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 151,
+            "exclude_no_body_measures": 31,
+            "hold_other_missing": 5,
+            "usable": 3157
+          },
+          "comment_code_counts": {
+            "BMIWAIST": {
+              "1": 151,
+              "missing": 3193
+            }
+          },
+          "component_status_code_counts": {
+            "1": 3082,
+            "2": 61,
+            "3": 170,
+            "4": 31
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        },
+        "BMXHIP": {
+          "target_count": 3344,
+          "value_state_counts": {
+            "non_missing": 3132,
+            "missing": 212
+          },
+          "processing_category_counts": {
+            "exclude_could_not_obtain": 177,
+            "exclude_no_body_measures": 31,
+            "hold_other_missing": 4,
+            "usable": 3132
+          },
+          "comment_code_counts": {
+            "BMIHIP": {
+              "1": 177,
+              "missing": 3167
+            }
+          },
+          "component_status_code_counts": {
+            "1": 3082,
+            "2": 61,
+            "3": 170,
+            "4": 31
+          },
+          "non_target_count": 0,
+          "other_special_value_count": 0
+        }
+      }
+    }
+  },
+  "policy": {
+    "usable": "non-missing value with no confirmed quality-affecting comment",
+    "exclude_could_not_obtain": "missing value with relevant comment code 1",
+    "exclude_no_body_measures": "missing value with BMDSTATS code 4",
+    "hold_other_missing": "missing value not assigned to either confirmed exclusion category",
+    "hold_comment_on_value": "non-missing value with BMIHT code 3 or BMIWT code 3/4, as applicable",
+    "non_target": "zero for all five items because official target ages include RIDAGEYR >= 20; screening/exam age timing remains a documented limitation",
+    "outliers": "no automatic removal; no additional range rule applied"
+  },
+  "prohibited_processing": {
+    "imputation": false,
+    "mean_replacement": false,
+    "estimated_imputation": false,
+    "automatic_outlier_removal": false,
+    "model_formula_or_coefficients": false,
+    "individual_rows_or_seqn_values_saved": false
+  },
+  "gate_B": "pending",
+  "gate_C": "pending"
+}
