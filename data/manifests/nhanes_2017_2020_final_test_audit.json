@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "audit": "NHANES 2017-March 2020 independent final-test candidate structural audit (B-gate execution 8)",
+  "inspected_at_utc": "2026-08-07T15:15:15.497971+00:00",
+  "files": [
+    {
+      "filename": "P_BMX.xpt",
+      "official_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_BMX.xpt",
+      "retrieved_at_utc": "2026-08-07T15:10:09.078515+00:00",
+      "file_size_bytes": 2520640,
+      "sha256": "7038d0da3169420a4a3cbaec09ac586a701b38e1c7b925431b60e13ac24fed66",
+      "xpt_read_success": true,
+      "row_count": 14300,
+      "column_count": 22,
+      "columns": [
+        "SEQN",
+        "BMDSTATS",
+        "BMXWT",
+        "BMIWT",
+        "BMXRECUM",
+        "BMIRECUM",
+        "BMXHEAD",
+        "BMIHEAD",
+        "BMXHT",
+        "BMIHT",
+        "BMXBMI",
+        "BMDBMIC",
+        "BMXLEG",
+        "BMILEG",
+        "BMXARML",
+        "BMIARML",
+        "BMXARMC",
+        "BMIARMC",
+        "BMXWAIST",
+        "BMIWAIST",
+        "BMXHIP",
+        "BMIHIP"
+      ],
+      "column_types": {
+        "SEQN": "float64",
+        "BMDSTATS": "float64",
+        "BMXWT": "float64",
+        "BMIWT": "float64",
+        "BMXRECUM": "float64",
+        "BMIRECUM": "float64",
+        "BMXHEAD": "float64",
+        "BMIHEAD": "float64",
+        "BMXHT": "float64",
+        "BMIHT": "float64",
+        "BMXBMI": "float64",
+        "BMDBMIC": "float64",
+        "BMXLEG": "float64",
+        "BMILEG": "float64",
+        "BMXARML": "float64",
+        "BMIARML": "float64",
+        "BMXARMC": "float64",
+        "BMIARMC": "float64",
+        "BMXWAIST": "float64",
+        "BMIWAIST": "float64",
+        "BMXHIP": "float64",
+        "BMIHIP": "float64"
+      },
+      "required_columns": [
+        "SEQN",
+        "BMDSTATS",
+        "BMXHT",
+        "BMIHT",
+        "BMXWT",
+        "BMIWT",
+        "BMXBMI",
+        "BMXWAIST",
+        "BMIWAIST",
+        "BMXHIP",
+        "BMIHIP"
+      ],
+      "missing_required_columns": [],
+      "seqn_integrity": {
+        "present": true,
+        "missing_count": 0,
+        "duplicate_row_count": 0,
+        "unique_count": 14300
+      }
+    },
+    {
+      "filename": "P_DEMO.xpt",
+      "official_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_DEMO.xpt",
+      "retrieved_at_utc": "2026-08-07T15:10:09.762515+00:00",
+      "file_size_bytes": 3614720,
+      "sha256": "2e46c6c26bf77cd8989f64011ace12cbf42c0f3e03414eb59acc5328c8f87913",
+      "xpt_read_success": true,
+      "row_count": 15560,
+      "column_count": 29,
+      "columns": [
+        "SEQN",
+        "SDDSRVYR",
+        "RIDSTATR",
+        "RIAGENDR",
+        "RIDAGEYR",
+        "RIDAGEMN",
+        "RIDRETH1",
+        "RIDRETH3",
+        "RIDEXMON",
+        "DMDBORN4",
+        "DMDYRUSZ",
+        "DMDEDUC2",
+        "DMDMARTZ",
+        "RIDEXPRG",
+        "SIALANG",
+        "SIAPROXY",
+        "SIAINTRP",
+        "FIALANG",
+        "FIAPROXY",
+        "FIAINTRP",
+        "MIALANG",
+        "MIAPROXY",
+        "MIAINTRP",
+        "AIALANGA",
+        "WTINTPRP",
+        "WTMECPRP",
+        "SDMVPSU",
+        "SDMVSTRA",
+        "INDFMPIR"
+      ],
+      "column_types": {
+        "SEQN": "float64",
+        "SDDSRVYR": "float64",
+        "RIDSTATR": "float64",
+        "RIAGENDR": "float64",
+        "RIDAGEYR": "float64",
+        "RIDAGEMN": "float64",
+        "RIDRETH1": "float64",
+        "RIDRETH3": "float64",
+        "RIDEXMON": "float64",
+        "DMDBORN4": "float64",
+        "DMDYRUSZ": "float64",
+        "DMDEDUC2": "float64",
+        "DMDMARTZ": "float64",
+        "RIDEXPRG": "float64",
+        "SIALANG": "float64",
+        "SIAPROXY": "float64",
+        "SIAINTRP": "float64",
+        "FIALANG": "float64",
+        "FIAPROXY": "float64",
+        "FIAINTRP": "float64",
+        "MIALANG": "float64",
+        "MIAPROXY": "float64",
+        "MIAINTRP": "float64",
+        "AIALANGA": "float64",
+        "WTINTPRP": "float64",
+        "WTMECPRP": "float64",
+        "SDMVPSU": "float64",
+        "SDMVSTRA": "float64",
+        "INDFMPIR": "float64"
+      },
+      "required_columns": [
+        "SEQN",
+        "RIDAGEYR",
+        "RIAGENDR",
+        "WTMECPRP",
+        "SDMVSTRA",
+        "SDMVPSU"
+      ],
+      "missing_required_columns": [],
+      "seqn_integrity": {
+        "present": true,
+        "missing_count": 0,
+        "duplicate_row_count": 0,
+        "unique_count": 15560
+      }
+    }
+  ],
+  "join_integrity": {
+    "key": "SEQN",
+    "validation": "one_to_one",
+    "joined_row_count": 14300,
+    "P_BMX_only_key_count": 0,
+    "P_DEMO_only_key_count": 1260,
+    "joinable": true
+  },
+  "design_principle": {
+    "full_examined_design_retained": true,
+    "domains_used": true,
+    "physical_subdesign_created": false,
+    "weight_renormalized": false
+  },
+  "domains": {
+    "adult": {
+      "row_count": 8544,
+      "positive_WTMECPRP_count": 8544,
+      "contributing_SDMVSTRA_count": 24,
+      "contributing_stratum_psu_pair_count": 49,
+      "lonely_PSU_stratum_count": 0,
+      "input_non_missing_counts": {
+        "RIDAGEYR": 8544,
+        "RIAGENDR": 8544,
+        "BMXHT": 8395,
+        "BMXWT": 8402,
+        "BMXBMI": 8381
+      },
+      "BMXWAIST_non_missing_count": 8055,
+      "BMXHIP_non_missing_count": 8067,
+      "BMDSTATS_code_counts": {
+        "1": 7908,
+        "2": 247,
+        "3": 267,
+        "4": 122
+      },
+      "comment_code_counts": {
+        "BMIHT": {
+          "1": 27,
+          "3": 97,
+          "missing": 8420
+        },
+        "BMIWT": {
+          "1": 13,
+          "3": 275,
+          "4": 30,
+          "missing": 8226
+        },
+        "BMIWAIST": {
+          "1": 349,
+          "missing": 8195
+        },
+        "BMIHIP": {
+          "1": 339,
+          "missing": 8205
+        }
+      },
+      "status_or_comment_exclusion_candidate_counts": {
+        "waist_task": 737,
+        "hip_task": 737
+      }
+    },
+    "adult_RIAGENDR_1": {
+      "row_count": 4135,
+      "positive_WTMECPRP_count": 4135,
+      "contributing_SDMVSTRA_count": 24,
+      "contributing_stratum_psu_pair_count": 49,
+      "lonely_PSU_stratum_count": 0,
+      "input_non_missing_counts": {
+        "RIDAGEYR": 4135,
+        "RIAGENDR": 4135,
+        "BMXHT": 4061,
+        "BMXWT": 4066,
+        "BMXBMI": 4051
+      },
+      "BMXWAIST_non_missing_count": 3938,
+      "BMXHIP_non_missing_count": 3936,
+      "BMDSTATS_code_counts": {
+        "1": 3865,
+        "2": 95,
+        "3": 120,
+        "4": 55
+      },
+      "comment_code_counts": {
+        "BMIHT": {
+          "1": 19,
+          "3": 52,
+          "missing": 4064
+        },
+        "BMIWT": {
+          "1": 9,
+          "3": 109,
+          "4": 16,
+          "missing": 4001
+        },
+        "BMIWAIST": {
+          "1": 135,
+          "missing": 4000
+        },
+        "BMIHIP": {
+          "1": 138,
+          "missing": 3997
+        }
+      },
+      "status_or_comment_exclusion_candidate_counts": {
+        "waist_task": 323,
+        "hip_task": 323
+      }
+    },
+    "adult_RIAGENDR_2": {
+      "row_count": 4409,
+      "positive_WTMECPRP_count": 4409,
+      "contributing_SDMVSTRA_count": 24,
+      "contributing_stratum_psu_pair_count": 49,
+      "lonely_PSU_stratum_count": 0,
+      "input_non_missing_counts": {
+        "RIDAGEYR": 4409,
+        "RIAGENDR": 4409,
+        "BMXHT": 4334,
+        "BMXWT": 4336,
+        "BMXBMI": 4330
+      },
+      "BMXWAIST_non_missing_count": 4117,
+      "BMXHIP_non_missing_count": 4131,
+      "BMDSTATS_code_counts": {
+        "1": 4043,
+        "2": 152,
+        "3": 147,
+        "4": 67
+      },
+      "comment_code_counts": {
+        "BMIHT": {
+          "1": 8,
+          "3": 45,
+          "missing": 4356
+        },
+        "BMIWT": {
+          "1": 4,
+          "3": 166,
+          "4": 14,
+          "missing": 4225
+        },
+        "BMIWAIST": {
+          "1": 214,
+          "missing": 4195
+        },
+        "BMIHIP": {
+          "1": 201,
+          "missing": 4208
+        }
+      },
+      "status_or_comment_exclusion_candidate_counts": {
+        "waist_task": 414,
+        "hip_task": 414
+      }
+    }
+  },
+  "qc_structure": {
+    "component_status": "BMDSTATS",
+    "item_comments": [
+      "BMIHT",
+      "BMIWT",
+      "BMIWAIST",
+      "BMIHIP"
+    ],
+    "official_codebook_interpretation_required": true
+  },
+  "measurement_compatibility": {
+    "2017_2019_2021": "compatible_for_version_0.1_candidates_no_material_procedure_difference_identified",
+    "same_name_only_assumption": false
+  },
+  "unconfirmed": [
+    "cycle間の同一人物が絶対にゼロであること",
+    "CゲートのWebアプリ搭載・商用利用・成果物公開・元データ再配布の最終許諾",
+    "封印方式、一回評価規則、評価指標、採否閾値",
+    "development内design-aware選択法"
+  ],
+  "prohibited_processing_performed": {
+    "target_values_or_distribution_output": false,
+    "SEQN_values_saved": false,
+    "imputation_or_value_change": false,
+    "outlier_processing_or_winsorization": false,
+    "model_fit_regression_prediction_or_performance": false,
+    "weight_renormalization": false,
+    "gate_B_or_C_pass": false,
+    "final_test_opened": false
+  },
+  "final_decision": "B: 条件付きで成立するが未解決事項あり"
+}
