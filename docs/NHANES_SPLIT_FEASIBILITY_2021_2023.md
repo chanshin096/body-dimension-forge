@@ -94,3 +94,7 @@ python3 -m venv .venv
 ```
 
 同じ公式XPTから生成したmanifestがGit上の正本と完全一致することを確認する。生データはGitへ追加しない。
+
+## 8. Bゲート実行6による正式判断
+
+Bゲート実行6で、固定3-way方式は不採用（判定C）となった。各5層を米国成人母集団の独立評価標本とみなす根拠がなく、df=5での必須評価とnested resamplingも成立しないためである。本書の割当は構造診断記録であり、学習・検証・最終試験へ使用しない。現行判断は [`NHANES_EVALUATION_DESIGN_DECISION_2021_2023.md`](NHANES_EVALUATION_DESIGN_DECISION_2021_2023.md) を正本とする。
