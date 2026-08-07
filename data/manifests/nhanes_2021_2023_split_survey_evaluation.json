@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "scope": "survey design implementation check only; no model, prediction, target evaluation, or individual output",
+  "software": {
+    "R": "R version 4.3.3 (2024-02-29)",
+    "survey": "4.2.1",
+    "haven": "2.5.4",
+    "jsonlite": "1.8.8"
+  },
+  "design_definition": {
+    "full": "svydesign(ids=~SDMVPSU, strata=~SDMVSTRA, weights=~WTMEC2YR, nest=TRUE, data=full examined sample)",
+    "domain": "subset(full_design, diagnostic_group == group)",
+    "physical": "same svydesign call using only rows assigned to group",
+    "survey_lonely_psu": "fail",
+    "quantile_ci": "svyquantile interval.type=mean with explicitly supplied subgroup df=5"
+  },
+  "full_examined_design": {
+    "rows": 8860,
+    "strata": 15,
+    "pseudo_psus": 30,
+    "degf_reported_by_survey": 15
+  },
+  "groups": {
+    "training": {
+      "retained_strata": 5,
+      "retained_pseudo_psus": 10,
+      "empty_original_strata": 10,
+      "single_psu_strata": 0,
+      "full_design_domain": {
+        "design_created": true,
+        "degf_reported_by_survey": 5,
+        "weighted_mean_se_finite": true,
+        "weighted_mean_ci_mechanically_available": true,
+        "weighted_quantile_ci_mechanically_available": true,
+        "warnings": []
+      },
+      "physical_subset_design": {
+        "design_created": true,
+        "degf_reported_by_survey": 5,
+        "weighted_mean_se_finite": true,
+        "weighted_mean_ci_mechanically_available": true,
+        "weighted_quantile_ci_mechanically_available": true,
+        "warnings": []
+      },
+      "domain_and_physical_weighted_mean_and_se_equal": true
+    },
+    "validation": {
+      "retained_strata": 5,
+      "retained_pseudo_psus": 10,
+      "empty_original_strata": 10,
+      "single_psu_strata": 0,
+      "full_design_domain": {
+        "design_created": true,
+        "degf_reported_by_survey": 5,
+        "weighted_mean_se_finite": true,
+        "weighted_mean_ci_mechanically_available": true,
+        "weighted_quantile_ci_mechanically_available": true,
+        "warnings": []
+      },
+      "physical_subset_design": {
+        "design_created": true,
+        "degf_reported_by_survey": 5,
+        "weighted_mean_se_finite": true,
+        "weighted_mean_ci_mechanically_available": true,
+        "weighted_quantile_ci_mechanically_available": true,
+        "warnings": []
+      },
+      "domain_and_physical_weighted_mean_and_se_equal": true
+    },
+    "sealed_final_test": {
+      "retained_strata": 5,
+      "retained_pseudo_psus": 10,
+      "empty_original_strata": 10,
+      "single_psu_strata": 0,
+      "full_design_domain": {
+        "design_created": true,
+        "degf_reported_by_survey": 5,
+        "weighted_mean_se_finite": true,
+        "weighted_mean_ci_mechanically_available": true,
+        "weighted_quantile_ci_mechanically_available": true,
+        "warnings": []
+      },
+      "physical_subset_design": {
+        "design_created": true,
+        "degf_reported_by_survey": 5,
+        "weighted_mean_se_finite": true,
+        "weighted_mean_ci_mechanically_available": true,
+        "weighted_quantile_ci_mechanically_available": true,
+        "warnings": []
+      },
+      "domain_and_physical_weighted_mean_and_se_equal": true
+    }
+  },
+  "observed_software_behavior": {
+    "all_designs_created": true,
+    "all_reported_degf_equal_5": true,
+    "any_lonely_psu_warning": false,
+    "all_simple_statistics_mechanically_available": true,
+    "all_domain_physical_mean_se_equal": true
+  },
+  "interpretation": {
+    "official_nhanes_compatible_candidate": "full examined design plus domain/subpopulation (A)",
+    "physical_subset_status": "not adopted: mechanical success does not establish an NHANES-valid population design after ten original strata are removed",
+    "three_way_method_status": "undecided",
+    "gate_status_change": false
+  },
+  "prohibited_output": {
+    "estimates_standard_errors_confidence_limits_or_quantiles_saved": false,
+    "model_training_prediction_or_performance_evaluation": false,
+    "individual_rows_seqn_or_assignments_saved": false
+  }
+}
