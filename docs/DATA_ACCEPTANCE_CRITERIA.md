@@ -62,6 +62,8 @@ NHANESのウエストとヒップでは、Bゲート実行3として別々の予
 
 Bゲート実行4では、3群PSU非重複の構造診断候補を確認したが、分割後のdesign-based分散法とnested resamplingが未確認のため方式の成立・採用は未決定とした。詳細は `docs/NHANES_SPLIT_FEASIBILITY_2021_2023.md` を正本とし、この確認でもA可・B保留・C保留を変更しない。
 
+Bゲート実行5では、NCHS公式のno-delete/domain手順とR `survey`の実挙動を照合し、分割後評価の実装候補をfull examined design＋split domainに限定し、5層・10 PSUの物理部分designを不採用とした。ただしmasked variance strataによる3群の予測評価上の妥当性、低自由度5、nested resampling、誤差統計別手法は未確定で、3-way方式の正式成立は未決定である。詳細は `docs/NHANES_SPLIT_SURVEY_EVALUATION_2021_2023.md` を正本とし、A可・B保留・C保留を変更しない。
+
 NHANESの5項目では、Aゲート実行1として公式生データの取得と受入検査が完了し、Aゲート実行2として `BMX_L` と `DEMO_L` の結合安全性確認、成人年齢候補、`RIAGENDR` コード別、欠損・comment・測定状態・標本設計変数の基礎集計が完了している。18歳以上は6,337件、20歳以上は6,064件で差は273件である。これを踏まえて成人基準と区分方針は決定済みである。詳細数値は `docs/NHANES_JOIN_QC_SUMMARY_2021_2023.md` を正本として参照し、ここへ大量に重複コピーしない。これはBまたはCの通過を意味せず、次工程では残る未決定事項を解消してからBゲートを設計する。
 
 **NHANES各項目の通過条件・停止条件**

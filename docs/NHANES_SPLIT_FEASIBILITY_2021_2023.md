@@ -82,6 +82,8 @@
 
 以上が決まるまで3-way分割は**未決定**、B/Cは**保留**のままであり、モデル学習へ進んではならない。
 
+Bゲート実行5では、NCHS公式手順上はfull examined design＋domainだけを採用候補とし、5層・10 PSUの物理部分designを不採用とした。一方、Rでの機械的成立だけでは3-way評価の科学的妥当性を確認できないため、本書の「構造候補は確認したが3-way方式の正式成立は未決定」という結論を維持する。詳細は[`NHANES_SPLIT_SURVEY_EVALUATION_2021_2023.md`](NHANES_SPLIT_SURVEY_EVALUATION_2021_2023.md)を参照する。
+
 ## 7. 再実行
 
 ```bash
