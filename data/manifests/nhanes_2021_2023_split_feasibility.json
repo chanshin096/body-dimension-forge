@@ -1,0 +1,1952 @@
+{
+  "schema_version": 1,
+  "scope": "aggregate pseudo-PSU split feasibility inspection; no model fitting or individual output",
+  "source_files": [
+    "BMX_L.xpt",
+    "DEMO_L.xpt"
+  ],
+  "join": {
+    "key": "SEQN",
+    "validation": "one_to_one",
+    "full_examined_row_count": 8860
+  },
+  "full_examined_design": {
+    "stratum_count": 15,
+    "pseudo_psu_count": 30,
+    "design_degrees_of_freedom_psu_minus_strata": 15,
+    "pseudo_psu_counts_by_stratum": {
+      "173": 2,
+      "174": 2,
+      "175": 2,
+      "176": 2,
+      "177": 2,
+      "178": 2,
+      "179": 2,
+      "180": 2,
+      "181": 2,
+      "182": 2,
+      "183": 2,
+      "184": 2,
+      "185": 2,
+      "186": 2,
+      "187": 2
+    }
+  },
+  "pseudo_psu_aggregate_counts": [
+    {
+      "SDMVSTRA": 173,
+      "SDMVPSU": 1,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 313,
+      "adult_unweighted_n": 221,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 99,
+        "2": 122
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 206,
+            "1": 91,
+            "2": 115
+          },
+          "age_h_bmi": {
+            "overall": 206,
+            "1": 91,
+            "2": 115
+          },
+          "age_w_bmi": {
+            "overall": 206,
+            "1": 91,
+            "2": 115
+          },
+          "age_bmi": {
+            "overall": 206,
+            "1": 91,
+            "2": 115
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 206,
+            "1": 91,
+            "2": 115
+          },
+          "age_h_bmi": {
+            "overall": 206,
+            "1": 91,
+            "2": 115
+          },
+          "age_w_bmi": {
+            "overall": 206,
+            "1": 91,
+            "2": 115
+          },
+          "age_bmi": {
+            "overall": 206,
+            "1": 91,
+            "2": 115
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 173,
+      "SDMVPSU": 2,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 326,
+      "adult_unweighted_n": 242,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 111,
+        "2": 131
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 222,
+            "1": 103,
+            "2": 119
+          },
+          "age_h_bmi": {
+            "overall": 222,
+            "1": 103,
+            "2": 119
+          },
+          "age_w_bmi": {
+            "overall": 222,
+            "1": 103,
+            "2": 119
+          },
+          "age_bmi": {
+            "overall": 222,
+            "1": 103,
+            "2": 119
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 222,
+            "1": 103,
+            "2": 119
+          },
+          "age_h_bmi": {
+            "overall": 222,
+            "1": 103,
+            "2": 119
+          },
+          "age_w_bmi": {
+            "overall": 222,
+            "1": 103,
+            "2": 119
+          },
+          "age_bmi": {
+            "overall": 222,
+            "1": 103,
+            "2": 119
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 174,
+      "SDMVPSU": 1,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 222,
+      "adult_unweighted_n": 152,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 70,
+        "2": 82
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 142,
+            "1": 65,
+            "2": 77
+          },
+          "age_h_bmi": {
+            "overall": 142,
+            "1": 65,
+            "2": 77
+          },
+          "age_w_bmi": {
+            "overall": 142,
+            "1": 65,
+            "2": 77
+          },
+          "age_bmi": {
+            "overall": 142,
+            "1": 65,
+            "2": 77
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 141,
+            "1": 64,
+            "2": 77
+          },
+          "age_h_bmi": {
+            "overall": 141,
+            "1": 64,
+            "2": 77
+          },
+          "age_w_bmi": {
+            "overall": 141,
+            "1": 64,
+            "2": 77
+          },
+          "age_bmi": {
+            "overall": 141,
+            "1": 64,
+            "2": 77
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 174,
+      "SDMVPSU": 2,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 370,
+      "adult_unweighted_n": 243,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 114,
+        "2": 129
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 222,
+            "1": 108,
+            "2": 114
+          },
+          "age_h_bmi": {
+            "overall": 222,
+            "1": 108,
+            "2": 114
+          },
+          "age_w_bmi": {
+            "overall": 222,
+            "1": 108,
+            "2": 114
+          },
+          "age_bmi": {
+            "overall": 222,
+            "1": 108,
+            "2": 114
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 221,
+            "1": 108,
+            "2": 113
+          },
+          "age_h_bmi": {
+            "overall": 221,
+            "1": 108,
+            "2": 113
+          },
+          "age_w_bmi": {
+            "overall": 221,
+            "1": 108,
+            "2": 113
+          },
+          "age_bmi": {
+            "overall": 221,
+            "1": 108,
+            "2": 113
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 175,
+      "SDMVPSU": 1,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 359,
+      "adult_unweighted_n": 242,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 105,
+        "2": 137
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 232,
+            "1": 101,
+            "2": 131
+          },
+          "age_h_bmi": {
+            "overall": 232,
+            "1": 101,
+            "2": 131
+          },
+          "age_w_bmi": {
+            "overall": 232,
+            "1": 101,
+            "2": 131
+          },
+          "age_bmi": {
+            "overall": 232,
+            "1": 101,
+            "2": 131
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 232,
+            "1": 101,
+            "2": 131
+          },
+          "age_h_bmi": {
+            "overall": 232,
+            "1": 101,
+            "2": 131
+          },
+          "age_w_bmi": {
+            "overall": 232,
+            "1": 101,
+            "2": 131
+          },
+          "age_bmi": {
+            "overall": 232,
+            "1": 101,
+            "2": 131
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 175,
+      "SDMVPSU": 2,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 279,
+      "adult_unweighted_n": 226,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 115,
+        "2": 111
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 194,
+            "1": 103,
+            "2": 91
+          },
+          "age_h_bmi": {
+            "overall": 194,
+            "1": 103,
+            "2": 91
+          },
+          "age_w_bmi": {
+            "overall": 194,
+            "1": 103,
+            "2": 91
+          },
+          "age_bmi": {
+            "overall": 194,
+            "1": 103,
+            "2": 91
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 194,
+            "1": 103,
+            "2": 91
+          },
+          "age_h_bmi": {
+            "overall": 194,
+            "1": 103,
+            "2": 91
+          },
+          "age_w_bmi": {
+            "overall": 194,
+            "1": 103,
+            "2": 91
+          },
+          "age_bmi": {
+            "overall": 194,
+            "1": 103,
+            "2": 91
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 176,
+      "SDMVPSU": 1,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 310,
+      "adult_unweighted_n": 186,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 84,
+        "2": 102
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 170,
+            "1": 76,
+            "2": 94
+          },
+          "age_h_bmi": {
+            "overall": 170,
+            "1": 76,
+            "2": 94
+          },
+          "age_w_bmi": {
+            "overall": 170,
+            "1": 76,
+            "2": 94
+          },
+          "age_bmi": {
+            "overall": 170,
+            "1": 76,
+            "2": 94
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 169,
+            "1": 76,
+            "2": 93
+          },
+          "age_h_bmi": {
+            "overall": 169,
+            "1": 76,
+            "2": 93
+          },
+          "age_w_bmi": {
+            "overall": 169,
+            "1": 76,
+            "2": 93
+          },
+          "age_bmi": {
+            "overall": 169,
+            "1": 76,
+            "2": 93
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 176,
+      "SDMVPSU": 2,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 229,
+      "adult_unweighted_n": 171,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 74,
+        "2": 97
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 146,
+            "1": 65,
+            "2": 81
+          },
+          "age_h_bmi": {
+            "overall": 146,
+            "1": 65,
+            "2": 81
+          },
+          "age_w_bmi": {
+            "overall": 146,
+            "1": 65,
+            "2": 81
+          },
+          "age_bmi": {
+            "overall": 146,
+            "1": 65,
+            "2": 81
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          },
+          "age_h_bmi": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          },
+          "age_w_bmi": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          },
+          "age_bmi": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 177,
+      "SDMVPSU": 1,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 410,
+      "adult_unweighted_n": 301,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 133,
+        "2": 168
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 283,
+            "1": 123,
+            "2": 160
+          },
+          "age_h_bmi": {
+            "overall": 283,
+            "1": 123,
+            "2": 160
+          },
+          "age_w_bmi": {
+            "overall": 283,
+            "1": 123,
+            "2": 160
+          },
+          "age_bmi": {
+            "overall": 283,
+            "1": 123,
+            "2": 160
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 282,
+            "1": 122,
+            "2": 160
+          },
+          "age_h_bmi": {
+            "overall": 282,
+            "1": 122,
+            "2": 160
+          },
+          "age_w_bmi": {
+            "overall": 282,
+            "1": 122,
+            "2": 160
+          },
+          "age_bmi": {
+            "overall": 282,
+            "1": 122,
+            "2": 160
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 177,
+      "SDMVPSU": 2,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 236,
+      "adult_unweighted_n": 168,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 70,
+        "2": 98
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 163,
+            "1": 68,
+            "2": 95
+          },
+          "age_h_bmi": {
+            "overall": 163,
+            "1": 68,
+            "2": 95
+          },
+          "age_w_bmi": {
+            "overall": 163,
+            "1": 68,
+            "2": 95
+          },
+          "age_bmi": {
+            "overall": 163,
+            "1": 68,
+            "2": 95
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 163,
+            "1": 68,
+            "2": 95
+          },
+          "age_h_bmi": {
+            "overall": 163,
+            "1": 68,
+            "2": 95
+          },
+          "age_w_bmi": {
+            "overall": 163,
+            "1": 68,
+            "2": 95
+          },
+          "age_bmi": {
+            "overall": 163,
+            "1": 68,
+            "2": 95
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 178,
+      "SDMVPSU": 1,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 316,
+      "adult_unweighted_n": 216,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 112,
+        "2": 104
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 206,
+            "1": 108,
+            "2": 98
+          },
+          "age_h_bmi": {
+            "overall": 206,
+            "1": 108,
+            "2": 98
+          },
+          "age_w_bmi": {
+            "overall": 206,
+            "1": 108,
+            "2": 98
+          },
+          "age_bmi": {
+            "overall": 206,
+            "1": 108,
+            "2": 98
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 206,
+            "1": 108,
+            "2": 98
+          },
+          "age_h_bmi": {
+            "overall": 206,
+            "1": 108,
+            "2": 98
+          },
+          "age_w_bmi": {
+            "overall": 206,
+            "1": 108,
+            "2": 98
+          },
+          "age_bmi": {
+            "overall": 206,
+            "1": 108,
+            "2": 98
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 178,
+      "SDMVPSU": 2,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 297,
+      "adult_unweighted_n": 206,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 102,
+        "2": 104
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 185,
+            "1": 93,
+            "2": 92
+          },
+          "age_h_bmi": {
+            "overall": 185,
+            "1": 93,
+            "2": 92
+          },
+          "age_w_bmi": {
+            "overall": 185,
+            "1": 93,
+            "2": 92
+          },
+          "age_bmi": {
+            "overall": 185,
+            "1": 93,
+            "2": 92
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 184,
+            "1": 92,
+            "2": 92
+          },
+          "age_h_bmi": {
+            "overall": 184,
+            "1": 92,
+            "2": 92
+          },
+          "age_w_bmi": {
+            "overall": 184,
+            "1": 92,
+            "2": 92
+          },
+          "age_bmi": {
+            "overall": 184,
+            "1": 92,
+            "2": 92
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 179,
+      "SDMVPSU": 1,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 400,
+      "adult_unweighted_n": 262,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 124,
+        "2": 138
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 236,
+            "1": 115,
+            "2": 121
+          },
+          "age_h_bmi": {
+            "overall": 236,
+            "1": 115,
+            "2": 121
+          },
+          "age_w_bmi": {
+            "overall": 236,
+            "1": 115,
+            "2": 121
+          },
+          "age_bmi": {
+            "overall": 236,
+            "1": 115,
+            "2": 121
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 235,
+            "1": 114,
+            "2": 121
+          },
+          "age_h_bmi": {
+            "overall": 235,
+            "1": 114,
+            "2": 121
+          },
+          "age_w_bmi": {
+            "overall": 235,
+            "1": 114,
+            "2": 121
+          },
+          "age_bmi": {
+            "overall": 235,
+            "1": 114,
+            "2": 121
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 179,
+      "SDMVPSU": 2,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 242,
+      "adult_unweighted_n": 158,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 71,
+        "2": 87
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          },
+          "age_h_bmi": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          },
+          "age_w_bmi": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          },
+          "age_bmi": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          },
+          "age_h_bmi": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          },
+          "age_w_bmi": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          },
+          "age_bmi": {
+            "overall": 145,
+            "1": 65,
+            "2": 80
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 180,
+      "SDMVPSU": 1,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 308,
+      "adult_unweighted_n": 237,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 117,
+        "2": 120
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 224,
+            "1": 109,
+            "2": 115
+          },
+          "age_h_bmi": {
+            "overall": 224,
+            "1": 109,
+            "2": 115
+          },
+          "age_w_bmi": {
+            "overall": 224,
+            "1": 109,
+            "2": 115
+          },
+          "age_bmi": {
+            "overall": 224,
+            "1": 109,
+            "2": 115
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 224,
+            "1": 109,
+            "2": 115
+          },
+          "age_h_bmi": {
+            "overall": 224,
+            "1": 109,
+            "2": 115
+          },
+          "age_w_bmi": {
+            "overall": 224,
+            "1": 109,
+            "2": 115
+          },
+          "age_bmi": {
+            "overall": 224,
+            "1": 109,
+            "2": 115
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 180,
+      "SDMVPSU": 2,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 309,
+      "adult_unweighted_n": 193,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 86,
+        "2": 107
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 174,
+            "1": 77,
+            "2": 97
+          },
+          "age_h_bmi": {
+            "overall": 174,
+            "1": 77,
+            "2": 97
+          },
+          "age_w_bmi": {
+            "overall": 174,
+            "1": 77,
+            "2": 97
+          },
+          "age_bmi": {
+            "overall": 174,
+            "1": 77,
+            "2": 97
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 175,
+            "1": 77,
+            "2": 98
+          },
+          "age_h_bmi": {
+            "overall": 175,
+            "1": 77,
+            "2": 98
+          },
+          "age_w_bmi": {
+            "overall": 175,
+            "1": 77,
+            "2": 98
+          },
+          "age_bmi": {
+            "overall": 175,
+            "1": 77,
+            "2": 98
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 181,
+      "SDMVPSU": 1,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 334,
+      "adult_unweighted_n": 229,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 99,
+        "2": 130
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 217,
+            "1": 93,
+            "2": 124
+          },
+          "age_h_bmi": {
+            "overall": 217,
+            "1": 93,
+            "2": 124
+          },
+          "age_w_bmi": {
+            "overall": 217,
+            "1": 93,
+            "2": 124
+          },
+          "age_bmi": {
+            "overall": 217,
+            "1": 93,
+            "2": 124
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 217,
+            "1": 93,
+            "2": 124
+          },
+          "age_h_bmi": {
+            "overall": 217,
+            "1": 93,
+            "2": 124
+          },
+          "age_w_bmi": {
+            "overall": 217,
+            "1": 93,
+            "2": 124
+          },
+          "age_bmi": {
+            "overall": 217,
+            "1": 93,
+            "2": 124
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 181,
+      "SDMVPSU": 2,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 242,
+      "adult_unweighted_n": 192,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 89,
+        "2": 103
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 180,
+            "1": 81,
+            "2": 99
+          },
+          "age_h_bmi": {
+            "overall": 180,
+            "1": 81,
+            "2": 99
+          },
+          "age_w_bmi": {
+            "overall": 180,
+            "1": 81,
+            "2": 99
+          },
+          "age_bmi": {
+            "overall": 180,
+            "1": 81,
+            "2": 99
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 180,
+            "1": 81,
+            "2": 99
+          },
+          "age_h_bmi": {
+            "overall": 180,
+            "1": 81,
+            "2": 99
+          },
+          "age_w_bmi": {
+            "overall": 180,
+            "1": 81,
+            "2": 99
+          },
+          "age_bmi": {
+            "overall": 180,
+            "1": 81,
+            "2": 99
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 182,
+      "SDMVPSU": 1,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 252,
+      "adult_unweighted_n": 164,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 67,
+        "2": 97
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 134,
+            "1": 56,
+            "2": 78
+          },
+          "age_h_bmi": {
+            "overall": 134,
+            "1": 56,
+            "2": 78
+          },
+          "age_w_bmi": {
+            "overall": 134,
+            "1": 56,
+            "2": 78
+          },
+          "age_bmi": {
+            "overall": 134,
+            "1": 56,
+            "2": 78
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 134,
+            "1": 56,
+            "2": 78
+          },
+          "age_h_bmi": {
+            "overall": 134,
+            "1": 56,
+            "2": 78
+          },
+          "age_w_bmi": {
+            "overall": 134,
+            "1": 56,
+            "2": 78
+          },
+          "age_bmi": {
+            "overall": 134,
+            "1": 56,
+            "2": 78
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 182,
+      "SDMVPSU": 2,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 327,
+      "adult_unweighted_n": 209,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 93,
+        "2": 116
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 194,
+            "1": 85,
+            "2": 109
+          },
+          "age_h_bmi": {
+            "overall": 194,
+            "1": 85,
+            "2": 109
+          },
+          "age_w_bmi": {
+            "overall": 194,
+            "1": 85,
+            "2": 109
+          },
+          "age_bmi": {
+            "overall": 194,
+            "1": 85,
+            "2": 109
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 193,
+            "1": 84,
+            "2": 109
+          },
+          "age_h_bmi": {
+            "overall": 193,
+            "1": 84,
+            "2": 109
+          },
+          "age_w_bmi": {
+            "overall": 193,
+            "1": 84,
+            "2": 109
+          },
+          "age_bmi": {
+            "overall": 193,
+            "1": 84,
+            "2": 109
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 183,
+      "SDMVPSU": 1,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 235,
+      "adult_unweighted_n": 159,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 72,
+        "2": 87
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 150,
+            "1": 68,
+            "2": 82
+          },
+          "age_h_bmi": {
+            "overall": 150,
+            "1": 68,
+            "2": 82
+          },
+          "age_w_bmi": {
+            "overall": 150,
+            "1": 68,
+            "2": 82
+          },
+          "age_bmi": {
+            "overall": 150,
+            "1": 68,
+            "2": 82
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 152,
+            "1": 68,
+            "2": 84
+          },
+          "age_h_bmi": {
+            "overall": 152,
+            "1": 68,
+            "2": 84
+          },
+          "age_w_bmi": {
+            "overall": 152,
+            "1": 68,
+            "2": 84
+          },
+          "age_bmi": {
+            "overall": 152,
+            "1": 68,
+            "2": 84
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 183,
+      "SDMVPSU": 2,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 270,
+      "adult_unweighted_n": 182,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 78,
+        "2": 104
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 169,
+            "1": 74,
+            "2": 95
+          },
+          "age_h_bmi": {
+            "overall": 169,
+            "1": 74,
+            "2": 95
+          },
+          "age_w_bmi": {
+            "overall": 169,
+            "1": 74,
+            "2": 95
+          },
+          "age_bmi": {
+            "overall": 169,
+            "1": 74,
+            "2": 95
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 168,
+            "1": 74,
+            "2": 94
+          },
+          "age_h_bmi": {
+            "overall": 168,
+            "1": 74,
+            "2": 94
+          },
+          "age_w_bmi": {
+            "overall": 168,
+            "1": 74,
+            "2": 94
+          },
+          "age_bmi": {
+            "overall": 168,
+            "1": 74,
+            "2": 94
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 184,
+      "SDMVPSU": 1,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 353,
+      "adult_unweighted_n": 258,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 109,
+        "2": 149
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 248,
+            "1": 105,
+            "2": 143
+          },
+          "age_h_bmi": {
+            "overall": 248,
+            "1": 105,
+            "2": 143
+          },
+          "age_w_bmi": {
+            "overall": 248,
+            "1": 105,
+            "2": 143
+          },
+          "age_bmi": {
+            "overall": 248,
+            "1": 105,
+            "2": 143
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 248,
+            "1": 105,
+            "2": 143
+          },
+          "age_h_bmi": {
+            "overall": 248,
+            "1": 105,
+            "2": 143
+          },
+          "age_w_bmi": {
+            "overall": 248,
+            "1": 105,
+            "2": 143
+          },
+          "age_bmi": {
+            "overall": 248,
+            "1": 105,
+            "2": 143
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 184,
+      "SDMVPSU": 2,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 329,
+      "adult_unweighted_n": 202,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 90,
+        "2": 112
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 180,
+            "1": 80,
+            "2": 100
+          },
+          "age_h_bmi": {
+            "overall": 180,
+            "1": 80,
+            "2": 100
+          },
+          "age_w_bmi": {
+            "overall": 180,
+            "1": 80,
+            "2": 100
+          },
+          "age_bmi": {
+            "overall": 180,
+            "1": 80,
+            "2": 100
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 182,
+            "1": 81,
+            "2": 101
+          },
+          "age_h_bmi": {
+            "overall": 182,
+            "1": 81,
+            "2": 101
+          },
+          "age_w_bmi": {
+            "overall": 182,
+            "1": 81,
+            "2": 101
+          },
+          "age_bmi": {
+            "overall": 182,
+            "1": 81,
+            "2": 101
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 185,
+      "SDMVPSU": 1,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 294,
+      "adult_unweighted_n": 199,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 83,
+        "2": 116
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 181,
+            "1": 76,
+            "2": 105
+          },
+          "age_h_bmi": {
+            "overall": 181,
+            "1": 76,
+            "2": 105
+          },
+          "age_w_bmi": {
+            "overall": 181,
+            "1": 76,
+            "2": 105
+          },
+          "age_bmi": {
+            "overall": 181,
+            "1": 76,
+            "2": 105
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 182,
+            "1": 77,
+            "2": 105
+          },
+          "age_h_bmi": {
+            "overall": 182,
+            "1": 77,
+            "2": 105
+          },
+          "age_w_bmi": {
+            "overall": 182,
+            "1": 77,
+            "2": 105
+          },
+          "age_bmi": {
+            "overall": 182,
+            "1": 77,
+            "2": 105
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 185,
+      "SDMVPSU": 2,
+      "diagnostic_group": "training",
+      "examined_unweighted_n": 268,
+      "adult_unweighted_n": 188,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 70,
+        "2": 118
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 176,
+            "1": 65,
+            "2": 111
+          },
+          "age_h_bmi": {
+            "overall": 176,
+            "1": 65,
+            "2": 111
+          },
+          "age_w_bmi": {
+            "overall": 176,
+            "1": 65,
+            "2": 111
+          },
+          "age_bmi": {
+            "overall": 176,
+            "1": 65,
+            "2": 111
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 173,
+            "1": 63,
+            "2": 110
+          },
+          "age_h_bmi": {
+            "overall": 173,
+            "1": 63,
+            "2": 110
+          },
+          "age_w_bmi": {
+            "overall": 173,
+            "1": 63,
+            "2": 110
+          },
+          "age_bmi": {
+            "overall": 173,
+            "1": 63,
+            "2": 110
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 186,
+      "SDMVPSU": 1,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 228,
+      "adult_unweighted_n": 149,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 65,
+        "2": 84
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 140,
+            "1": 62,
+            "2": 78
+          },
+          "age_h_bmi": {
+            "overall": 140,
+            "1": 62,
+            "2": 78
+          },
+          "age_w_bmi": {
+            "overall": 140,
+            "1": 62,
+            "2": 78
+          },
+          "age_bmi": {
+            "overall": 140,
+            "1": 62,
+            "2": 78
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 136,
+            "1": 62,
+            "2": 74
+          },
+          "age_h_bmi": {
+            "overall": 136,
+            "1": 62,
+            "2": 74
+          },
+          "age_w_bmi": {
+            "overall": 136,
+            "1": 62,
+            "2": 74
+          },
+          "age_bmi": {
+            "overall": 136,
+            "1": 62,
+            "2": 74
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 186,
+      "SDMVPSU": 2,
+      "diagnostic_group": "validation",
+      "examined_unweighted_n": 270,
+      "adult_unweighted_n": 185,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 76,
+        "2": 109
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 177,
+            "1": 73,
+            "2": 104
+          },
+          "age_h_bmi": {
+            "overall": 177,
+            "1": 73,
+            "2": 104
+          },
+          "age_w_bmi": {
+            "overall": 177,
+            "1": 73,
+            "2": 104
+          },
+          "age_bmi": {
+            "overall": 177,
+            "1": 73,
+            "2": 104
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 178,
+            "1": 73,
+            "2": 105
+          },
+          "age_h_bmi": {
+            "overall": 178,
+            "1": 73,
+            "2": 105
+          },
+          "age_w_bmi": {
+            "overall": 178,
+            "1": 73,
+            "2": 105
+          },
+          "age_bmi": {
+            "overall": 178,
+            "1": 73,
+            "2": 105
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 187,
+      "SDMVPSU": 1,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 206,
+      "adult_unweighted_n": 113,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 54,
+        "2": 59
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 106,
+            "1": 50,
+            "2": 56
+          },
+          "age_h_bmi": {
+            "overall": 106,
+            "1": 50,
+            "2": 56
+          },
+          "age_w_bmi": {
+            "overall": 106,
+            "1": 50,
+            "2": 56
+          },
+          "age_bmi": {
+            "overall": 106,
+            "1": 50,
+            "2": 56
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 106,
+            "1": 50,
+            "2": 56
+          },
+          "age_h_bmi": {
+            "overall": 106,
+            "1": 50,
+            "2": 56
+          },
+          "age_w_bmi": {
+            "overall": 106,
+            "1": 50,
+            "2": 56
+          },
+          "age_bmi": {
+            "overall": 106,
+            "1": 50,
+            "2": 56
+          }
+        }
+      }
+    },
+    {
+      "SDMVSTRA": 187,
+      "SDMVPSU": 2,
+      "diagnostic_group": "sealed_final_test",
+      "examined_unweighted_n": 326,
+      "adult_unweighted_n": 211,
+      "adult_RIAGENDR_raw_code_counts": {
+        "1": 88,
+        "2": 123
+      },
+      "complete_case_counts": {
+        "waist": {
+          "age_hw": {
+            "overall": 186,
+            "1": 81,
+            "2": 105
+          },
+          "age_h_bmi": {
+            "overall": 186,
+            "1": 81,
+            "2": 105
+          },
+          "age_w_bmi": {
+            "overall": 186,
+            "1": 81,
+            "2": 105
+          },
+          "age_bmi": {
+            "overall": 186,
+            "1": 81,
+            "2": 105
+          }
+        },
+        "hip": {
+          "age_hw": {
+            "overall": 184,
+            "1": 79,
+            "2": 105
+          },
+          "age_h_bmi": {
+            "overall": 184,
+            "1": 79,
+            "2": 105
+          },
+          "age_w_bmi": {
+            "overall": 184,
+            "1": 79,
+            "2": 105
+          },
+          "age_bmi": {
+            "overall": 184,
+            "1": 79,
+            "2": 105
+          }
+        }
+      }
+    }
+  ],
+  "diagnostic_candidate": {
+    "status": "feasibility candidate only; not adopted; final-test values were not evaluated",
+    "rule": "sort public SDMVSTRA codes ascending and assign whole strata cyclically to training, validation, sealed_final_test",
+    "seed": null,
+    "target_ratios": null,
+    "pseudo_psu_overlap_count": 0,
+    "unassigned_pseudo_psu_count": 0,
+    "individual_cross_group_count": 0,
+    "groups": {
+      "training": {
+        "retained_stratum_count": 5,
+        "retained_pseudo_psu_count": 10,
+        "design_degrees_of_freedom_psu_minus_strata": 5,
+        "single_psu_stratum_count": 0,
+        "missing_original_stratum_count": 10,
+        "all_task_raw_code_input_set_cells_positive": true,
+        "examined_unweighted_n": 2961,
+        "adult_unweighted_n": 2000,
+        "adult_RIAGENDR_raw_code_counts": {
+          "1": 876,
+          "2": 1124
+        },
+        "complete_case_counts": {
+          "waist": {
+            "age_hw": {
+              "overall": 1810,
+              "1": 797,
+              "2": 1013
+            },
+            "age_h_bmi": {
+              "overall": 1810,
+              "1": 797,
+              "2": 1013
+            },
+            "age_w_bmi": {
+              "overall": 1810,
+              "1": 797,
+              "2": 1013
+            },
+            "age_bmi": {
+              "overall": 1810,
+              "1": 797,
+              "2": 1013
+            }
+          },
+          "hip": {
+            "age_hw": {
+              "overall": 1804,
+              "1": 794,
+              "2": 1010
+            },
+            "age_h_bmi": {
+              "overall": 1804,
+              "1": 794,
+              "2": 1010
+            },
+            "age_w_bmi": {
+              "overall": 1804,
+              "1": 794,
+              "2": 1010
+            },
+            "age_bmi": {
+              "overall": 1804,
+              "1": 794,
+              "2": 1010
+            }
+          }
+        }
+      },
+      "validation": {
+        "retained_stratum_count": 5,
+        "retained_pseudo_psu_count": 10,
+        "design_degrees_of_freedom_psu_minus_strata": 5,
+        "single_psu_stratum_count": 0,
+        "missing_original_stratum_count": 10,
+        "all_task_raw_code_input_set_cells_positive": true,
+        "examined_unweighted_n": 2858,
+        "adult_unweighted_n": 1969,
+        "adult_RIAGENDR_raw_code_counts": {
+          "1": 881,
+          "2": 1088
+        },
+        "complete_case_counts": {
+          "waist": {
+            "age_hw": {
+              "overall": 1844,
+              "1": 827,
+              "2": 1017
+            },
+            "age_h_bmi": {
+              "overall": 1844,
+              "1": 827,
+              "2": 1017
+            },
+            "age_w_bmi": {
+              "overall": 1844,
+              "1": 827,
+              "2": 1017
+            },
+            "age_bmi": {
+              "overall": 1844,
+              "1": 827,
+              "2": 1017
+            }
+          },
+          "hip": {
+            "age_hw": {
+              "overall": 1840,
+              "1": 825,
+              "2": 1015
+            },
+            "age_h_bmi": {
+              "overall": 1840,
+              "1": 825,
+              "2": 1015
+            },
+            "age_w_bmi": {
+              "overall": 1840,
+              "1": 825,
+              "2": 1015
+            },
+            "age_bmi": {
+              "overall": 1840,
+              "1": 825,
+              "2": 1015
+            }
+          }
+        }
+      },
+      "sealed_final_test": {
+        "retained_stratum_count": 5,
+        "retained_pseudo_psu_count": 10,
+        "design_degrees_of_freedom_psu_minus_strata": 5,
+        "single_psu_stratum_count": 0,
+        "missing_original_stratum_count": 10,
+        "all_task_raw_code_input_set_cells_positive": true,
+        "examined_unweighted_n": 3041,
+        "adult_unweighted_n": 2095,
+        "adult_RIAGENDR_raw_code_counts": {
+          "1": 963,
+          "2": 1132
+        },
+        "complete_case_counts": {
+          "waist": {
+            "age_hw": {
+              "overall": 1934,
+              "1": 895,
+              "2": 1039
+            },
+            "age_h_bmi": {
+              "overall": 1934,
+              "1": 895,
+              "2": 1039
+            },
+            "age_w_bmi": {
+              "overall": 1934,
+              "1": 895,
+              "2": 1039
+            },
+            "age_bmi": {
+              "overall": 1934,
+              "1": 895,
+              "2": 1039
+            }
+          },
+          "hip": {
+            "age_hw": {
+              "overall": 1933,
+              "1": 893,
+              "2": 1040
+            },
+            "age_h_bmi": {
+              "overall": 1933,
+              "1": 893,
+              "2": 1040
+            },
+            "age_w_bmi": {
+              "overall": 1933,
+              "1": 893,
+              "2": 1040
+            },
+            "age_bmi": {
+              "overall": 1933,
+              "1": 893,
+              "2": 1040
+            }
+          }
+        }
+      }
+    },
+    "structural_result": "each group has five complete strata, ten pseudo-PSUs, and nominal PSU-minus-strata df=5"
+  },
+  "feasibility_conclusion": {
+    "three_way_nonoverlap_and_positive_complete_cases": true,
+    "physical_subset_has_two_psus_in_each_retained_stratum": true,
+    "design_based_variance_method_confirmed": false,
+    "overall_status": "undecided",
+    "reason": "the aggregate candidate satisfies structural necessary conditions, but an official method for split-specific design variance, empty strata, and single-PSU handling has not been adopted"
+  },
+  "prohibited_processing_performed": {
+    "model_training_regression_prediction_or_baseline": false,
+    "imputation_value_change_winsorization_or_outlier_removal": false,
+    "individual_rows_seqn_list_or_individual_assignment_saved": false,
+    "gate_status_change": false
+  }
+}
