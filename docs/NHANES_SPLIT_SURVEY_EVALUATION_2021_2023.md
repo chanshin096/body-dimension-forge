@@ -92,3 +92,7 @@ Rscript scripts/check_nhanes_split_survey_evaluation.R
 ```
 
 公式XPTからmanifestが完全一致すること、R/package版、3群すべての構造・自由度・警告・計算可否、禁止出力falseを確認する。
+
+## 7. Bゲート実行6による正式判断
+
+Bゲート実行6で、AがR/NCHSのdomain実装候補であることと、固定3-wayが科学的評価設計として妥当であることを区別し、固定3-way方式を不採用（判定C）とした。df=5の計算可否は採用根拠とせず、このsplitで性能評価を実行しない。現行判断、代替候補、封印・停止条件は [`NHANES_EVALUATION_DESIGN_DECISION_2021_2023.md`](NHANES_EVALUATION_DESIGN_DECISION_2021_2023.md) を正本とする。
