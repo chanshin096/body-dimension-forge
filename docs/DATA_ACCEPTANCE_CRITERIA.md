@@ -68,6 +68,8 @@ Bゲート実行6では、masked variance strataを丸ごと割り当てた各5�
 
 Bゲート実行7では独立最終試験の成立性を公式資料だけで監査し、判定B「条件付き候補はあるが追加監査が必要」とした。NHANES 2017–March 2020 pre-pandemic `P_BMX`＋`P_DEMO`を第一候補、2017–2018を重複する代替候補とするが、目的値非閲覧の受入・QC/design構造・2019手順差分・cycle間再参加・利用条件・封印手順の追加監査まで正式採用しない。ANSUR IIはSoldiers標本で一般成人用design・目的測定定義が不足するため不採用、将来NHANESは必要public-useファイル未公開のため現時点で利用不能とした。詳細は [`INDEPENDENT_FINAL_TEST_DATA_AUDIT_2021_2023.md`](INDEPENDENT_FINAL_TEST_DATA_AUDIT_2021_2023.md) を正本とする。development内選択法も未決定で、両方の事前承認前はモデル学習を停止し、A可・B保留・C保留を変更しない。
 
+Bゲート実行8では第一候補 `P_BMX`＋`P_DEMO` を公式取得し、目的値非閲覧で受入・必須列・一意結合、成人および生コードdomainの24層49 PSU・lonely PSUなし、QC構造を確認した。2019–2020公式manualを独立照合し2017・2021と測定互換としたが、cycle間同一人物ゼロ、development内選択法、封印・一回評価規則、Cゲート利用条件は未確定である。判定B「条件付きで成立するが未解決事項あり」、正式未採用、A可・B/C保留、モデル学習停止を維持する。詳細は [`NHANES_2017_2020_FINAL_TEST_ACCEPTANCE_AUDIT.md`](NHANES_2017_2020_FINAL_TEST_ACCEPTANCE_AUDIT.md) を正本とする。
+
 NHANESの5項目では、Aゲート実行1として公式生データの取得と受入検査が完了し、Aゲート実行2として `BMX_L` と `DEMO_L` の結合安全性確認、成人年齢候補、`RIAGENDR` コード別、欠損・comment・測定状態・標本設計変数の基礎集計が完了している。18歳以上は6,337件、20歳以上は6,064件で差は273件である。これを踏まえて成人基準と区分方針は決定済みである。詳細数値は `docs/NHANES_JOIN_QC_SUMMARY_2021_2023.md` を正本として参照し、ここへ大量に重複コピーしない。これはBまたはCの通過を意味せず、次工程では残る未決定事項を解消してからBゲートを設計する。
 
 **NHANES各項目の通過条件・停止条件**
