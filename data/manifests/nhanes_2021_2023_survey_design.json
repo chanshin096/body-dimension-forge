@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "scope": "aggregate survey-design validation counts and adopted analysis policy only",
+  "source_files": [
+    "BMX_L.xpt",
+    "DEMO_L.xpt"
+  ],
+  "population_filter": "RIDAGEYR >= 20 as a survey domain; full examined design retained for variance estimation",
+  "design": {
+    "weight": "WTMEC2YR",
+    "strata": "SDMVSTRA",
+    "cluster": "SDMVPSU",
+    "weight_modification": "none; no renormalization after domain, item-missing, or QC selection",
+    "variance": "design-based method supporting strata, PSU, weight, and domain estimation"
+  },
+  "validation": {
+    "examined_record_count": 8860,
+    "adult_domain_counts": {
+      "overall": 6064,
+      "RIAGENDR=1": 2720,
+      "RIAGENDR=2": 3344
+    },
+    "variables": {
+      "WTMEC2YR": {
+        "present": true,
+        "numeric_dtype": true,
+        "valid_count": 8860,
+        "missing_count": 0
+      },
+      "SDMVSTRA": {
+        "present": true,
+        "numeric_dtype": true,
+        "valid_count": 8860,
+        "missing_count": 0
+      },
+      "SDMVPSU": {
+        "present": true,
+        "numeric_dtype": true,
+        "valid_count": 8860,
+        "missing_count": 0
+      }
+    },
+    "WTMEC2YR_value_class_counts": {
+      "positive": 8860,
+      "zero": 0,
+      "negative": 0
+    },
+    "SDMVSTRA_code_counts": {
+      "173": 639,
+      "174": 592,
+      "175": 638,
+      "176": 539,
+      "177": 646,
+      "178": 613,
+      "179": 642,
+      "180": 617,
+      "181": 576,
+      "182": 579,
+      "183": 505,
+      "184": 682,
+      "185": 562,
+      "186": 498,
+      "187": 532
+    },
+    "SDMVPSU_code_counts": {
+      "1": 4540,
+      "2": 4320
+    },
+    "stratum_psu_cell_count": 30
+  },
+  "output_policy": {
+    "unweighted_counts_are_labeled_separately": true,
+    "weighted_estimates_require_variance_or_uncertainty": true,
+    "individual_rows_seqn_or_weight_values_saved": false,
+    "public_output": "aggregate counts and disclosure-reviewed weighted estimates only; no microdata"
+  },
+  "prohibited_processing": {
+    "weight_renormalization_or_scaling": true,
+    "imputation_outlier_removal_regression_correlation_model_or_coefficients": true,
+    "individual_rows_seqn_or_weight_values_saved": true
+  },
+  "gate_B": "pending",
+  "gate_C": "pending"
+}
