@@ -118,9 +118,9 @@ def main() -> None:
             "public_output": "aggregate counts and disclosure-reviewed weighted estimates only; no microdata",
         },
         "prohibited_processing": {
-            "weight_renormalization_or_scaling": False,
-            "imputation_outlier_removal_regression_correlation_model_or_coefficients": False,
-            "individual_rows_seqn_or_weight_values_saved": False,
+            "weight_renormalization_or_scaling": True,
+            "imputation_outlier_removal_regression_correlation_model_or_coefficients": True,
+            "individual_rows_seqn_or_weight_values_saved": True,
         },
         "gate_B": "pending",
         "gate_C": "pending",

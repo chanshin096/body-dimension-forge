@@ -75,9 +75,9 @@
     "public_output": "aggregate counts and disclosure-reviewed weighted estimates only; no microdata"
   },
   "prohibited_processing": {
-    "weight_renormalization_or_scaling": false,
-    "imputation_outlier_removal_regression_correlation_model_or_coefficients": false,
-    "individual_rows_seqn_or_weight_values_saved": false
+    "weight_renormalization_or_scaling": true,
+    "imputation_outlier_removal_regression_correlation_model_or_coefficients": true,
+    "individual_rows_seqn_or_weight_values_saved": true
   },
   "gate_B": "pending",
   "gate_C": "pending"
