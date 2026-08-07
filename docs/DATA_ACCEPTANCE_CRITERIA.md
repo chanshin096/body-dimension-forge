@@ -64,7 +64,9 @@ Bゲート実行4では、3群PSU非重複の構造診断候補を確認した�
 
 Bゲート実行5では、NCHS公式のno-delete/domain手順とR `survey`の実挙動を照合し、分割後評価の実装候補をfull examined design＋split domainに限定し、5層・10 PSUの物理部分designを不採用とした。ただしmasked variance strataによる3群の予測評価上の妥当性、低自由度5、nested resampling、誤差統計別手法は未確定で、3-way方式の正式成立は未決定である。詳細は `docs/NHANES_SPLIT_SURVEY_EVALUATION_2021_2023.md` を正本とし、A可・B保留・C保留を変更しない。
 
-Bゲート実行6では、masked variance strataを丸ごと割り当てた各5層を米国成人母集団の独立評価標本とみなす根拠がなく、df=5での必須指標・下位domainの不確実性とnested resamplingも成立させられないため、固定3-way方式を**不採用**とした。NHANES全15層・30 PSUを分割せずdevelopmentに用い、将来確保する独立データを最終試験にする方式を正式候補とする。ただしdevelopment内のdesign-aware選択法と独立最終試験データは未決定であり、両方の事前承認前はモデル学習を停止する。詳細は `docs/NHANES_EVALUATION_DESIGN_DECISION_2021_2023.md` を正本とし、A可・B保留・C保留を変更しない。
+Bゲート実行6では、masked variance strataを丸ごと割り当てた各5層を米国成人母集団の独立評価標本とみなす根拠がなく、df=5での必須指標・下位domainの不確実性とnested resamplingも成立させられないため、固定3-way方式を**不採用**とした。NHANES全15層・30 PSUを分割せずdevelopmentに用い、将来確保する独立データを最終試験にする方式を正式候補とする。詳細は `docs/NHANES_EVALUATION_DESIGN_DECISION_2021_2023.md` を正本とする。
+
+Bゲート実行7では独立最終試験の成立性を公式資料だけで監査し、判定B「条件付き候補はあるが追加監査が必要」とした。NHANES 2017–March 2020 pre-pandemic `P_BMX`＋`P_DEMO`を第一候補、2017–2018を重複する代替候補とするが、目的値非閲覧の受入・QC/design構造・2019手順差分・cycle間再参加・利用条件・封印手順の追加監査まで正式採用しない。ANSUR IIはSoldiers標本で一般成人用design・目的測定定義が不足するため不採用、将来NHANESは必要public-useファイル未公開のため現時点で利用不能とした。詳細は [`INDEPENDENT_FINAL_TEST_DATA_AUDIT_2021_2023.md`](INDEPENDENT_FINAL_TEST_DATA_AUDIT_2021_2023.md) を正本とする。development内選択法も未決定で、両方の事前承認前はモデル学習を停止し、A可・B保留・C保留を変更しない。
 
 NHANESの5項目では、Aゲート実行1として公式生データの取得と受入検査が完了し、Aゲート実行2として `BMX_L` と `DEMO_L` の結合安全性確認、成人年齢候補、`RIAGENDR` コード別、欠損・comment・測定状態・標本設計変数の基礎集計が完了している。18歳以上は6,337件、20歳以上は6,064件で差は273件である。これを踏まえて成人基準と区分方針は決定済みである。詳細数値は `docs/NHANES_JOIN_QC_SUMMARY_2021_2023.md` を正本として参照し、ここへ大量に重複コピーしない。これはBまたはCの通過を意味せず、次工程では残る未決定事項を解消してからBゲートを設計する。
 
