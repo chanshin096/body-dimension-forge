@@ -4,9 +4,9 @@
 
 本書は、第0.1版のウエスト `BMXWAIST`・ヒップ `BMXHIP` 課題について、NHANES August 2021–August 2023のdevelopment内だけでモデル、入力セット、前処理、変数およびhyperparameterを比較・選択する方式を監査する正本である。前提は、full examined sampleで `WTMEC2YR`、`SDMVSTRA`、`SDMVPSU` を指定し、成人、生 `RIAGENDR` code、項目別QC対象をdomain/subpopulationとする15 strata・30 pseudo-PSUのdesignである。
 
-初回監査はreplicate weightsを分散推定用途だけと捉え、内部validationへの読み替えに根拠がないとして判定Cとした。しかし、R `survey` の現行公式manualには **`withCrossval`: “Crossvalidation using replicate weights”** があり、essentially zero replicate weightのclusterをtest、残りをtrainingとしてfitする専用interfaceを明記する。この仕様に照らすと、一律の不採用理由は誤りであるため撤回する。
+初回監査はreplicate weightsを分散推定用途だけと捉え、内部validationへの読み替えに根拠がないとして判定Cとした。その後、R `survey` の現行公式manualに **`withCrossval`: “Crossvalidation using replicate weights”** があり、essentially zero replicate weightのclusterをtest、残りをtrainingとして扱うとの再確認指摘を受けた。この指摘が公式help・sourceと一致すれば一律不採用理由は成立しないため、初回理由を撤回して追加監査対象とする。ただし、本環境から現行manual本文を再取得できておらず、以下では「公式本文を独立確認済み」と「指摘内容を前提にした検証仮説」を混同しない。
 
-**追加検証後の最終判定は B「replicate-weight cross-validationは有力候補だが、実行環境・実装・一次方法論・loss集約を追加検証するまで正式採用しない」**とする。`withCrossval`＋JKnは15×2 stratified designでも各replicateで1 PSUをtestにできるため、従来の固定foldをTaylor designとして別々に評価する問題とは異なる。BRRも2 PSU/stratumという構造に適合し得る。一方、現在の実行環境では利用可能なR/surveyを正常に構成できず、現行実装の実行確認、引用一次方法論、domainの実挙動、MAE/RMSEと候補差の推論、完全なpipeline nestingを確認できていない。計算可能性を推測してAにしない。
+**追加監査の最終判定は B「replicate-weight cross-validationは成立可能性のある候補だが、公式本文・実行環境・実装・一次方法論・loss集約を確認するまで正式採用しない」**とする。JKnでは15×2 stratified designの各replicateで1 PSUがzero weightになる、BRRでは各stratumの一方がzero weightになる、という構造仮説は従来の固定foldをTaylor designとして別々に評価する問題とは異なる。一方、現行packageによる生成結果も`withCrossval`によるtest判定も実行確認できず、引用一次方法論、domainの実挙動、MAE/RMSEと候補差の推論、完全なpipeline nestingも確認できていない。計算可能性を推測してAにしない。
 
 この監査ではNHANESデータを読み込まず、モデル学習、係数推定、予測、目的値・分布・性能の閲覧または算出を行っていない。NHANES 2017–March 2020候補は開封していない。生データ、個人値、`SEQN`または一覧、split/replicate assignmentも保存していない。5項目のA可・B保留・C保留、最終試験候補の「条件付き・正式未採用」は変更しない。
 
@@ -20,16 +20,23 @@
 
 NCHS資料には公開masked variance unitsを予測CVに使用する明示的な禁止を確認できない。一方、`withCrossval`、JKn/BRRによるモデル選択、候補差、選択後optimismをNHANES向けに承認する記述も確認できない。**NCHS専用手順がないことだけを不採用理由にはせず**、weight・masked design・domain・一般化に関するNCHSの制約と、replicate-weight CVの方法論的妥当性を別々に審査する。
 
-### 2.2 R survey公式仕様から確認できること
+### 2.2 R survey公式仕様の確認状態
 
-R [`survey` reference manual](https://cran.r-project.org/package=survey) の `withCrossval`、`as.svrepdesign`、`svrepdesign`、`weights.svyrep.design` を対象とする。
+R [`survey` reference manual](https://cran.r-project.org/package=survey) の `withCrossval`、`as.svrepdesign`、`svrepdesign`、`weights.svyrep.design` を対象とする。2026-08-09の再監査ではCRAN package page、manual PDF、source tarballおよびmaintainer source mirrorへの接続がproxyのHTTP 403で失敗した。したがって、次の内容は再確認指摘に基づく**検証仮説**であり、現行help・sourceを本環境で独立確認した事実ではない。
 
-- `withCrossval` はreplicate weightごとにessentially zero weightのclusterをtest set、それ以外をtraining setとして、training用functionとprediction用functionを呼び出す専用interfaceである。JK1/JKnはcluster-level cross-validationに非常に近く、bootstrap replicate weightsはcross-validation用bootstrapに類似すると公式説明にある。よって「replicate weightsはvalidationへ使う仕様がない」という初回記述は撤回する。
-- `as.svrepdesign()` はstratified designにJKnを使用できる。JKnでは各stratum内のPSUを順にdeleteするreplicateが候補となり、15×2なら30 replicateが想定される。各replicateのtestは削除された1 PSU、trainingは残り29 PSUであり、同一replicate内で同じPSUが両方へ跨がる構造ではない。
-- BRRは原則として各stratumに2 PSUを持つdesignを対象とする。各replicateでは各stratumの一方がessentially zeroとなるため、test 15 PSU・training 15 PSUのhalf-sample型になる。JKnとBRRでtest setとtraining setの大きさ、学習安定性、loss集約は異なり、同じ方式として混ぜない。
+- `withCrossval` がreplicate weightごとにessentially zero weightのclusterをtest set、それ以外をtraining setとしてfit/predictを行い、JK1/JKnをcluster-level CVに近いもの、bootstrap replicate weightsをcross-validation用bootstrapに類似するものと説明する、という指摘。これが現行help・sourceで一致するか、zero判定の単位・tolerance、引数、返り値を確認する。
+- `as.svrepdesign()` がstratified designにJKnを使用できるという指摘。通常のdelete-one PSU JKnなら15×2から30 replicate、各replicateのtest 1 PSU・training 29 PSUが予想されるが、現行実装の生成結果としては未確認である。
+- BRRが原則として各stratumに2 PSUを持つdesignを対象とするという指摘。通常のBRRならtest 15 PSU・training 15 PSUのhalf-sample型が予想されるが、採用Hadamard matrix、replicate数、Fay指定、`withCrossval`のzero判定を現行実装で確認していない。
 - bootstrapではzero-weightになるPSU数がreplicateごとに一定とは限らない。空または過小な課題×生code×QC domain、全PSUが正weightでtestがないreplicate、同じPSUの複数回選択を停止検査する必要がある。
 
-公式manualが引用する一次方法論の正確な書誌、前提、選択誤差の推論範囲と現行function実装本文は、今回のネットワーク制限により独立取得できず**未確認**である。manual要約だけを一次方法論確認済みと表示しない。
+公式manualが引用する一次方法論の正確な書誌、前提、選択誤差の推論範囲と現行function実装本文は、今回のネットワーク制限により独立取得できず**未確認**である。二次資料は採否根拠に使わず、manualの伝聞要約だけを一次方法論確認済みと表示しない。
+
+| 必須証拠 | 今回の状態 | 判定への扱い |
+| --- | --- | --- |
+| CRAN現行manualの`withCrossval` help本文 | HTTP 403で再取得不能 | function存在・仕様を独立確認済みとしない |
+| CRAN source tarball内の実装・tests | HTTP 403で再取得不能 | zero判定、cluster単位、fit/predict、返り値を推測で固定しない |
+| helpが引用する一次資料 | 書誌・本文とも未取得 | loss推論、model selection、選択後optimismの根拠にしない |
+| NCHSのvariance/weight/design資料 | 既存監査で公式本文を確認済み | full design、weight、domainの制約にだけ用いる |
 
 ## 3. 実行環境と再現検査の状態
 
@@ -37,16 +44,16 @@ R [`survey` reference manual](https://cran.r-project.org/package=survey) の `wi
 
 現行CRAN版への更新・導入は**候補**に留め、repositoryの依存版を勝手に変更しない。正式検査ではR本体、`survey` version、`packageDescription("survey")`、`exists("withCrossval", asNamespace("survey"), inherits=FALSE)`、`formals()`、package同梱help、function body、引用文献を同一環境で保存する。
 
-[`check_survey_crossval_structure.R`](../scripts/check_survey_crossval_structure.R) を、NHANESの目的値を使わない15 strata×2 PSU toy designの構造検査として追加した。これは次をfail-closedで検査するが、現環境ではR/survey不在のため**未実行**であり、出力manifestも作成しない。
+[`check_survey_crossval_structure.R`](../scripts/check_survey_crossval_structure.R) を、NHANESの目的値を使わない15 strata×2 PSU toy designの**replicate weight構造検査案**として追加した。これは`withCrossval`を呼び出さないため、同functionのtest判定、fit/predictまたはloss集約を検証するscriptではない。次をfail-closedで検査する予定だが、現環境ではR/survey不在のため**未実行**であり、出力manifestも作成しない。
 
 1. R・survey versionと`withCrossval`の存在。
 2. JKn/BRR replicate weight matrixでPSU内weightが一様であること。
-3. JKnの各replicateがtest 1 PSU・training 29 PSU、BRRがtest 15 PSU・training 15 PSUとなり、同じPSUが両方へ跨がらないこと。
+3. replicate weightのzero/nonzeroを仮のtest/training区分としたとき、JKnの各replicateが1/29 PSU、BRRが15/15 PSUとなり、同じPSUが両方へ跨がらないこと。実際の`withCrossval`判定との一致は別検査とする。
 4. replicate数、`degf()`、scale/rscales、zero判定閾値だけを集計し、行、ID、目的値、予測、lossを保存しないこと。
 
 ## 4. lonely PSU、domain、weight、dfの再監査
 
-`withCrossval`でJKnのtest側が1 PSUである事実は残る。しかし、この1 PSUを独立したTaylor-linearization survey designとして評価し、そのfold固有SEを求める方式ではない。replicate-weight CVは、replicate schemeが順に除いたclusterへの予測を作り、それらを元のsampling weightおよびreplicate構造に沿って集約する考え方である。このため、従来の「test foldがlonely PSUだから直ちに計算不能」という反論はそのまま適用できず、`survey.lonely.psu`補正でtest foldを救済する必要もない。
+JKnでtest側が1 PSUになる構造仮説は、この1 PSUを独立したTaylor-linearization survey designとして評価しfold固有SEを求める方式とは異なる。`withCrossval`が指摘どおりreplicate schemeで除いたclusterへの予測を集約するなら、従来の「test foldがlonely PSUだから直ちに計算不能」という反論はそのまま適用できない。ただし、loss集約と分散推定の実装・一次理論を未確認のため、「lonely PSU問題を理論的に解決済み」とも判定しない。test foldへ`survey.lonely.psu`補正を適用する案は引き続き採用しない。
 
 ただし、次は未解決である。
 
@@ -57,7 +64,7 @@ R [`survey` reference manual](https://cran.r-project.org/package=survey) の `wi
 
 ## 5. preprocessing、候補選択、loss
 
-`withCrossval`がtraining用functionとprediction用functionを反復呼出しできることは、任意pipelineが自動的に漏洩安全になることを意味しない。正式候補化には次を満たすwrapperのtoy testが必要である。
+`withCrossval`が指摘どおりtraining/prediction functionを反復呼出しできても、任意pipelineが自動的に漏洩安全になることを意味しない。正式候補化には現行sourceで引数・データ受渡しを確認した上で、次を満たすwrapperのtoy testが必要である。
 
 - imputationのfit、scaling、変換、特徴生成、変数選択、hyperparameter tuning、early stopping、baselineの加重中央値を各replicateのtraining clusterだけから作る。
 - test目的値をtraining function、inner tuning、候補追加、探索範囲、停止規則へ渡さない。hyperparameterも選ぶ場合は、outer replicateと独立性を保つinner design-aware選択を構成できるか、または候補gridを外部根拠で固定してouter lossだけで単一候補を選ぶ手順を事前決定する。
@@ -72,9 +79,9 @@ MAEは各test predictionから `abs(observed-predicted)` を作り、元のsampl
 | 個人random split / 通常K-fold | cluster相関・層化を無視し同一PSUを跨がせる | **不採用** |
 | 固定PSU half-sample / repeated splitをTaylor foldとして評価 | foldごとのlonely PSU、反復依存、固定3-way再導入の問題が残る | **不採用** |
 | stratum単位grouped K-fold | 一部strataしかない標本を全母集団評価へ一般化できない | **不採用** |
-| `withCrossval`＋JKn | 公式にcluster-level CVに近い。全体replicate構造でlossを集約するためTaylor lonely-PSU foldとは異なる。15×2でPSU非跨ぎの可能性が高い | **有力候補・追加検証** |
-| `withCrossval`＋BRR | 2 PSU/stratumへ構造的に適合し、全strataから一方ずつtestにする | **候補・JKnとの差と学習安定性を追加検証** |
-| `withCrossval`＋bootstrap | CV bootstrapに類似する公式説明はあるが、zero cluster数、空domain、重複、方式別weightが未確認 | **候補・追加検証** |
+| `withCrossval`＋JKn | 指摘されたhelp仕様どおりならcluster-level CVに近く、Taylor lonely-PSU foldとは異なる。15×2でPSU非跨ぎが成立する可能性があるが、公式本文・実装・toy結果は未確認 | **成立可能性あり・追加検証** |
+| `withCrossval`＋BRR | 指摘されたhelp仕様どおりなら2 PSU/stratumへ構造的に適合し、全strataから一方ずつtestにできる可能性がある。実装・replicate数・Fay・loss集約は未確認 | **成立可能性あり・追加検証** |
+| `withCrossval`＋bootstrap | CV bootstrapに類似するとの指摘はあるが、公式本文、zero cluster数、空domain、重複、方式別weightが未確認 | **成立可能性あり・追加検証** |
 | full-development AIC等 | out-of-sample lossや任意algorithmの共通比較ではない | **今回の代替には不採用** |
 | 内部選択なし・外部根拠で単一仕様固定 | leakageを避ける別計画だが根拠・仕様未確定 | **別案として未決定** |
 
@@ -82,7 +89,7 @@ MAEは各test predictionから `abs(observed-predicted)` を作り、元のsampl
 
 ### 7.1 第0.1版の正式採否
 
-判定Bであり、**正式採用方式はまだない**。JKnを第一検証候補、BRRとbootstrap系を比較候補とするが、fold数、replicate数、zero tolerance、Fay係数、seed、df、loss/候補差のCI、model、入力またはhyperparameterを仮決めしない。モデル学習へ進まない。
+判定Bであり、**正式採用方式はまだない**。JKnを第一検証対象、BRRとbootstrap系を比較対象とするが、「有力」の語を公式・実装確認済みという意味では使わない。fold数、replicate数、zero tolerance、Fay係数、seed、df、loss/候補差のCI、model、入力またはhyperparameterを仮決めせず、モデル学習へ進まない。
 
 ### 7.2 禁止事項
 

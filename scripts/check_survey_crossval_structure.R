@@ -1,9 +1,12 @@
 #!/usr/bin/env Rscript
 
-# Bゲート実行9の目的値非閲覧toy検査。モデル、予測、loss、個人値は作らない。
+# Bゲート実行9の目的値非閲覧toy検査案。replicate weight構造だけを調べる。
+# withCrossval自体のtest判定、fit/predict、loss集約を検証するものではない。
 suppressPackageStartupMessages(library(survey))
 
-stopifnot(exists("withCrossval", asNamespace("survey"), inherits = FALSE))
+if (!exists("withCrossval", asNamespace("survey"), inherits = FALSE)) {
+  stop("installed survey does not provide withCrossval")
+}
 
 toy <- expand.grid(row_in_psu = 1:2, psu = 1:2, stratum = 1:15)
 toy$weight <- 1
